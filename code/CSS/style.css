@@ -31,6 +31,10 @@ section {
     height: 100vh;
 }
 
+section:last-of-type {
+    height: 200vh;
+}
+
 /* ---- Hero Section || Start Frame ---- */
 
 .hero-section {
@@ -44,20 +48,18 @@ section {
 h1 {
     top: 50%;
     left: 50%;
-    margin: 0;
     transform: translate(-50%, -50%);
     white-space: nowrap;
     position: absolute;
 }
 
 h1::before {
+    color: var(--pudding);
+    top: 0;
+    left: 0;
+    height: 50%;
     content: attr(data-heading);
     overflow: hidden;
-    left: 0;
-    top: 0;
-    /* Split color wont work responsivly */
-    height: 50%;
-    color: var(--pudding);
     position: absolute;
 }
 
@@ -73,6 +75,8 @@ h1::before {
     width: 100%;
 }
 
+/* ---- Media Query ---- */
+
 @media screen and (min-width: 650px){
     .hero-section {
         flex-direction: row;
@@ -80,6 +84,7 @@ h1::before {
 
     h1::before {
         width: 50%;
+        height: 100%;
     }
 
     .hero-img-left {
@@ -94,6 +99,7 @@ h1::before {
 }
 
 /* ---- Sign-up Section || Second Frame ---- */
+
 .signup-section {
     background-color: var(--bone);
     display: flex;
@@ -109,3 +115,36 @@ h1::before {
 .signup-container > :not(h2) {
     margin-top: 15px;
 }
+
+/* ---- Products Section || Third Frame ---- */
+
+.products-section {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.product-container {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+}
+
+.product {
+    background-color: palevioletred;
+    justify-self: stretch;
+}
+/* ---- Media Query ---- */
+
+@media screen and (min-width: 650px){
+    .product-container { 
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 4rem;
+    }
+}
+@media screen and (min-width: 850px){
+    .product-container { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

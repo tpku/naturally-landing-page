@@ -50,6 +50,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
+    pointer-events: none;
     position: absolute;
 }
 
@@ -121,7 +122,7 @@ h1::before {
 .products-section {
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 0rem;
 }
 
 .product-container {
@@ -137,6 +138,9 @@ h1::before {
 /* ---- Media Query ---- */
 
 @media screen and (min-width: 650px){
+    .products-section {
+        padding: 2rem;
+    }
     .product-container { 
         grid-template-columns: repeat(2, 1fr);
         row-gap: 4rem;
@@ -145,6 +149,9 @@ h1::before {
 @media screen and (min-width: 850px){
     .product-container { 
         grid-template-columns: repeat(2, 1fr);
+    }
+    .products-section {
+        padding: 2rem;
     }
 }
 

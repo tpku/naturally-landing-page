@@ -155,3 +155,42 @@ h1::before {
     }
 }
 
+/* ---- Buttons ---- */
+.buttonContiner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 1.4em;
+    font-size: 1rem;
+    font-family: 'Baskervville', serif;
+    color: #fff;
+    background-color: #231610;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.32);
+    padding: 1.5em 2em;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #231610;
+}
+
+.btn:active {
+    background-color: #48342A;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.32);
+    
+    /* Kanske det inte ska vara en transition */
+    /* transition: .4s box-shadow ease-out; */
+}
+
+.btn.large {
+    font-size: 2rem;
+}
+
+.btn.xlarge {
+    font-size: 3.31rem;
+}

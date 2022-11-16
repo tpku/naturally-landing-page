@@ -22,6 +22,10 @@ h2 {
     font-size: 1.5rem;
 }
 
+.btn {
+    font-family: 'Baskervville', serif;
+}
+
 
 @media screen and (min-width: 650px){
     h1 {
@@ -31,4 +35,12 @@ h2 {
         -moz-transition: font-size .50s linear; 
         -webkit-transition: font-size .50s linear; 
     }
+}
+
+.product-title {
+    color: var(--bone);
+}
+
+.product-text {
+    color: var(--white);
 }

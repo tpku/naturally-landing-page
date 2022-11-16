@@ -165,7 +165,7 @@ h1::before {
 .btn {
     display: flex;
     align-items: center;
-    gap: 1.4em;
+    gap: 1.25em;
     font-size: 1rem;
     font-family: 'Baskervville', serif;
     color: #fff;
@@ -175,8 +175,9 @@ h1::before {
     border: none;
     cursor: pointer;
 }
-.btn:hover {
-    background-color: #231610;
+
+.btn:hover span {
+    transform: scale(1.1);
 }
 
 .btn:active {

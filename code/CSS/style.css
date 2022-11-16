@@ -3,7 +3,7 @@
 }
 
 html, body {
-    background-color: var(--sand);
+    background-color: var(--white);
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -55,7 +55,7 @@ h1 {
 }
 
 h1::before {
-    color: var(--pudding);
+    color: var(--black);
     top: 0;
     left: 0;
     height: 50%;
@@ -71,7 +71,7 @@ h1::before {
 }
 
 .hero-img-right {
-    background-color: var(--leaf);
+    background-color: var(--green);
     height: 50%;
     width: 100%;
 }
@@ -102,7 +102,7 @@ h1::before {
 /* ---- Sign-up Section || Second Frame ---- */
 
 .signup-section {
-    background-color: var(--bone);
+    background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,8 +168,8 @@ h1::before {
     gap: 1.25em;
     font-size: 1rem;
     font-family: 'Baskervville', serif;
-    color: #fff;
-    background-color: #231610;
+    color: var(--white);
+    background-color: var(--black);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.32);
     padding: 1.5em 2em;
     border: none;

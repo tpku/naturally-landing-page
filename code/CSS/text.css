@@ -1,6 +1,6 @@
 html {
     color: var(--black);
-    font-family: sans-serif;
+    font-family: 'Baskervville', serif;
 }
 
 h1, h2, h3, p {
@@ -8,8 +8,10 @@ h1, h2, h3, p {
 }
 
 h1 {
-    color: var(--sand);
-    font-size: 2rem;
+    /* Temporary Font Family */
+    font-family: sans-serif;
+    color: var(--white);
+    font-size: 4.7rem;
     transition: font-size .50s linear; 
     -o-transition: font-size .50s linear; 
     -moz-transition: font-size .50s linear; 

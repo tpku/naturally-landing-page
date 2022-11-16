@@ -55,11 +55,11 @@ h1 {
 }
 
 h1::before {
-    color: var(--black);
+    color: var(--white);
     top: 0;
     left: 0;
     height: 50%;
-    content: attr(data-heading);
+    content: attr(text-overlay);
     overflow: hidden;
     position: absolute;
 }
@@ -68,12 +68,16 @@ h1::before {
     background-color: var(--sand);
     height: 50%;
     width: 100%;
+    background-image: url(/IMG/shape-md.jpg);
+    background-position: right;
 }
 
 .hero-img-right {
     background-color: var(--green);
     height: 50%;
     width: 100%;
+    background-image: url(/IMG/tin-md.jpg);
+    background-position: left;
 }
 
 /* ---- Media Query ---- */
@@ -91,11 +95,13 @@ h1::before {
     .hero-img-left {
         height: 100%;
         width: 50%;
+        background-position: bottom;
     }
     
     .hero-img-right {
         height: 100%;
         width: 50%;
+        background-position: top;
     }
 }
 

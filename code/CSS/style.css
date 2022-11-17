@@ -205,7 +205,17 @@ h1::before {
     height: 50px;
     cursor: pointer;
     /* border: 2px solid #fff; */
+    rotate: 0deg;
+    transition: rotate var(--transition-duration);
+    transition-delay: var(--transition-duration);
 }
+
+.menu-btn .burger:nth-child(2) {
+    rotate: 0deg;
+    scale: 1 1;
+    transition: rotate var(--transition-duration);
+}
+
 .menu-btn .burger {
     display: inline-block;
 

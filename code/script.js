@@ -14,3 +14,13 @@ cardsHover.forEach((card) => {
     btnContainer.classList.toggle('product-hover');
   });
 });
+
+const navBar = document.querySelector(".nav-bar");
+
+window.addEventListener('scroll', function (e) {
+    if (window.scrollY > 971) {
+        navBar.classList.add("active-desktop")
+    } else {
+        navBar.classList.remove("active-desktop")
+    }
+  });

@@ -1,15 +1,25 @@
 const cardsHover = document.querySelectorAll(".product.card");
-const textContainer = document.querySelector(".text-container.c-1");
-const btnContainer = document.querySelector(".btn-container-index.c-1")
+const textContainer = document.querySelector(".text-container");
+const btnContainer = document.querySelector(".btn-container-index")
 
 
 
+// cardsHover.forEach((card) => {
+//   card.addEventListener("mouseover", () => {
+//     textContainer.classList.toggle('product-hover');
+//     btnContainer.classList.toggle('product-hover');
+//   });
+//   card.addEventListener("mouseleave", () => {
+//     textContainer.classList.toggle('product-hover');
+//     btnContainer.classList.toggle('product-hover');
+//   });
+// });
 cardsHover.forEach((card) => {
-  card.addEventListener("mouseover", () => {
+  card.addEventListener("mouseenter", (e) => {
     textContainer.classList.toggle('product-hover');
     btnContainer.classList.toggle('product-hover');
   });
-  card.addEventListener("mouseleave", () => {
+  card.addEventListener("mouseleave", (e) => {
     textContainer.classList.toggle('product-hover');
     btnContainer.classList.toggle('product-hover');
   });

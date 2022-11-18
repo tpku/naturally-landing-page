@@ -3,8 +3,13 @@ html {
     font-family: 'Baskervville', serif;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a{
     margin: 0;
+    text-decoration: none;
+}
+
+a {
+    color: var(--white);
 }
 
 h1 {
@@ -34,6 +39,10 @@ h2 {
         -o-transition: font-size .50s linear; 
         -moz-transition: font-size .50s linear; 
         -webkit-transition: font-size .50s linear; 
+    }
+
+    a {
+        color: var(--black);
     }
 }
 

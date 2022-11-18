@@ -10,17 +10,14 @@ window.addEventListener('scroll', function (e) {
 });
 
 // Products Card Hover Effect
-const cardsHover = document.querySelectorAll(".product.card");
-const textContainer = document.querySelector(".text-container");
-const btnContainer = document.querySelector(".btn-container-index")
+const cardsHover = document.querySelectorAll(".card");
+const productInfo = document.querySelector(".product-info")
 
 cardsHover.forEach((card) => {
   card.addEventListener("mouseenter", (e) => {
-    textContainer.classList.toggle('product-hover');
-    btnContainer.classList.toggle('product-hover');
+    productInfo.classList.toggle('active-card');
   });
   card.addEventListener("mouseleave", (e) => {
-    textContainer.classList.toggle('product-hover');
-    btnContainer.classList.toggle('product-hover');
+    productInfo.classList.toggle('active-card');
   });
 });

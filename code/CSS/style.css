@@ -262,6 +262,44 @@ h1::before {
     }
 }
 
+/* ---- Footer ---- */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    padding-inline: 32px;
+    padding-bottom: 96px;
+    padding-top: 42px;
+}
+
+footer .footer-continer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 900px;
+}
+
+footer .footer-continer h2, footer .footer-continer p {
+    font-family: Poppins;
+    text-align: center;
+}
+
+footer .footer-continer .social {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-block: 55px;
+}
+
+footer .footer-continer .social a {
+    color: var(--black );
+}
+
+footer .footer-continer .social a i {
+    font-size: 2.5rem;
+}
+
 /* ---- Buttons ---- */
 
 .btn-container {

@@ -261,21 +261,36 @@ footer {
     flex-direction: column;
     align-items: center;
     background-color: var(--white);
-    width: 1000px;
+    padding-inline: 32px;
+    padding-bottom: 96px;
+    padding-top: 42px;
 }
 
 footer .footer-continer {
     display: flex;
     flex-direction: column;
+    gap: 24px;
+    max-width: 900px;
 }
 
-footer .social {
+footer .footer-continer h2, footer .footer-continer p {
+    font-family: Poppins;
+    text-align: center;
+}
+
+footer .footer-continer .social {
     display: flex;
-    gap: 50px;
+    justify-content: center;
+    gap: 32px;
+    margin-block: 55px;
 }
 
-footer .social i {
-    font-size: 3.75rem;
+footer .footer-continer .social a {
+    color: var(--black );
+}
+
+footer .footer-continer .social a i {
+    font-size: 2.5rem;
 }
 
 /* ---- Buttons ---- */

@@ -2,7 +2,7 @@
 const navBar = document.querySelector(".nav-bar");
 // Navbar Desktop
 window.addEventListener('scroll', function (e) {
-  if (window.scrollY > 850) {
+  if (window.scrollY > document.documentElement.clientHeight) {
     navBar.classList.add("active-desktop")
   } else {
     navBar.classList.remove("active-desktop")

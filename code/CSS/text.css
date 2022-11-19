@@ -3,9 +3,15 @@ html {
     font-family: 'Baskervville', serif;
 }
 
-h1, h2, h3, p, a{
+h1, h2, h3, p, a, ul{
     margin: 0;
     text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
 a {
@@ -33,6 +39,12 @@ h2 {
 
 
 @media screen and (min-width: 650px){
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+    
     h1 {
         font-size: 4rem;
         transition: font-size .50s linear; 

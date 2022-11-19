@@ -13,11 +13,11 @@ window.addEventListener('scroll', function (e) {
 const cardsHover = document.querySelectorAll(".card");
 const productInfo = document.querySelector(".product-info")
 
-cardsHover.forEach((card) => {
-  card.addEventListener("mouseenter", (e) => {
-    productInfo.classList.toggle('active-card');
-  });
-  card.addEventListener("mouseleave", (e) => {
-    productInfo.classList.toggle('active-card');
-  });
-});
+// cardsHover.forEach((card) => {
+//   card.addEventListener("mouseenter", (e) => {
+//     productInfo.classList.toggle('active-card');
+//   });
+//   card.addEventListener("mouseleave", (e) => {
+//     productInfo.classList.toggle('active-card');
+//   });
+// });

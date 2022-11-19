@@ -16,7 +16,9 @@ main {
 
 header {
     width: 100%;
-    z-index: 1;
+    /* z-index: 1; */
+    /* z-index: 10 if we want the navbar to hover over the hero section */
+    z-index: 10;
     position: fixed;
 }
 
@@ -50,14 +52,19 @@ section:last-of-type {
 @media screen and (min-width: 650px) {
     .nav-bar {
         padding: 0 3rem;
-        display: none;
+        /* display: none; */
+        opacity: 0;
+        transform: translateY(-100px);
     }
 
-    .active-desktop {
+    .nav-bar.active-desktop {
         display: flex;
         color: var(--black);
         height: 80px;
         background-color: var(--white);
+        opacity: 100%;
+        transform: translateY(0);
+        transition: opacity, transform .6s linear;
     }
 }
 

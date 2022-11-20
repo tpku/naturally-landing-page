@@ -1,3 +1,8 @@
+/* font-family: 'Baskervville', serif;
+font-family: 'Notable', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+
 html {
     color: var(--black);
     font-family: 'Baskervville', serif;
@@ -8,19 +13,33 @@ h1, h2, h3, p, a, ul{
     text-decoration: none;
 }
 
+.logo a {
+    font-family: 'Notable', sans-serif;
+    font-size: 1.5rem;
+}
+
 ul {
     list-style: none;
     display: flex;
     gap: 2rem;
 }
 
+ul a {
+    font-size: 1.5rem;
+    color: var(--bone);
+}
+
+ul a:hover {
+    color: var(--black);
+}
+
 a {
-    color: var(--white);
+    color: var(--black);
+    font-family: Poppins;
 }
 
 h1 {
-    /* Temporary Font Family */
-    font-family: sans-serif;
+    font-family: 'Notable', sans-serif;
     color: var(--black);
     font-size: 4.7rem;
     transition: font-size .50s linear; 
@@ -38,11 +57,17 @@ h2 {
 }
 
 
-@media screen and (min-width: 650px){
+@media screen and (min-width: 800px){
+    .logo a {
+        font-size: 2rem;
+    }
+
     ul {
-        list-style: none;
-        display: flex;
-        gap: 2rem;
+        gap: 1rem;
+    }
+
+    ul a {
+        font-size: 2rem;
     }
     
     h1 {
@@ -56,6 +81,21 @@ h2 {
     a {
         color: var(--black);
     }
+}
+
+@media screen and (min-width: 1150px) {
+    .logo a {
+        font-size: 2.5rem;
+    }
+
+    ul {
+        gap: 4.8rem;
+    }
+
+    ul a {
+        font-size: 2.5rem;
+    }
+    
 }
 
 .product-title {

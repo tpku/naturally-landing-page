@@ -27,7 +27,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--white);
 }
 
 .active-menu {
@@ -51,20 +50,26 @@ section:last-of-type {
 
 @media screen and (min-width: 650px) {
     .nav-bar {
-        padding: 0 3rem;
+        padding: 1.5rem 3rem 1.5 3rem;
         /* display: none; */
         opacity: 0;
+        align-items: flex-start;
         transform: translateY(-100px);
     }
 
     .nav-bar.active-desktop {
-        display: flex;
+        background-color: var(--white);
         color: var(--black);
         height: 80px;
-        background-color: var(--white);
+        display: flex;
         opacity: 100%;
         transform: translateY(0);
-        transition: opacity, transform .6s linear;
+        transition: opacity, transform, height, .5s ease-out;
+    }
+
+    .nav-bar.active-desktop:hover {
+        background-color: var(--white);
+        height: 240px;
     }
 }
 
@@ -165,11 +170,11 @@ h1::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .product-container {
     display: grid;
-    width: 100%;
     row-gap: 4rem;
     column-gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
@@ -178,6 +183,7 @@ h1::before {
 
 .card {
     height: 90vh;
+    max-width: 700px;
     background-color: var(--bone);
     filter: drop-shadow(2px 2px 17px rgba(0, 0, 0, 0.55));    
 }
@@ -244,21 +250,22 @@ h1::before {
     }
     .product-container {
         padding: 2rem 0;
-        row-gap: 0;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 4rem;
         /* grid-template-rows: repeat(6, 1fr); */
     }
-    .none {
-        background-color: var(--white);
-        display:flex;
-    }
 }
-@media screen and (min-width: 950px){
+@media screen and (min-width: 1050px){
     .products-section {
         padding: 0 5rem;
     }
     .product-container { 
+        grid-template-columns: repeat(2, 1fr);
         row-gap: 0;
+    }
+
+    .none {
+        display:flex;
     }
 }
 
@@ -280,8 +287,8 @@ footer .footer-continer {
     max-width: 900px;
 }
 
-footer .footer-continer h2, footer .footer-continer p {
-    font-family: Poppins;
+footer .footer-continer h3, footer .footer-continer p {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 

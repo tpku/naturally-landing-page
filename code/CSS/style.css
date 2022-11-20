@@ -293,6 +293,23 @@ footer .footer-continer .social a i {
     font-size: 2.5rem;
 }
 
+footer .footer-continer img {
+    height: 22px;
+}
+
+/* ---- Media Query ---- */
+
+@media screen and (min-width: 700px) {
+    footer .footer-continer .social {
+        margin-block: 36 px;
+    }
+
+    footer .footer-continer img {
+        height: 28px;
+    }
+}
+
+
 /* ---- Buttons ---- */
 
 .btn-container {

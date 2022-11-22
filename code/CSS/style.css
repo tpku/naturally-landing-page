@@ -52,7 +52,7 @@ section:last-of-type {
 
 @media screen and (min-width: 650px) {
     .nav-bar {
-        padding: 1.5rem 3rem 1.5 3rem;
+        /* padding: 1.5rem 3rem 1.5 3rem; */
         align-items: flex-start;
         position: relative;
         opacity: 0;
@@ -98,16 +98,17 @@ section:last-of-type {
         background-color: var(--white);
         color: var(--black);
         display: flex;
+        height: 65px;
         opacity: 100%;
         transform: translateY(0);
         transition: opacity, transform, height, .5s ease-out;
+        overflow: hidden;
     }
 
     .nav-bar.active-desktop:hover {
         background-color: var(--white);
-        height: 320px;
         filter: drop-shadow(2px 2px 17px rgba(0, 0, 0, 0.05));
-        transition: height, 1s ease-out;
+        height: 320px;
     }
 }
 

@@ -21,32 +21,63 @@ header {
 }
 
 .nav-bar {
-    padding: 1.5rem 3rem 0 3rem;
+    padding: 2rem 1.5rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    position: relative;
+}
+
+.menu-btns, .logo {
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.hamburger {
+    position: absolute;
+    background-color: #4f5b4f42;
+    width: 48px;
+    height: 48px;
+    right: 24px;
+    border-radius: 100%;
+    box-shadow: 0 0 20px 0.10px #00000032;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.nav-content {
-    width: 100%;
+
+ul {
+    list-style: none;
+    /* gap: 2rem; */
 }
 
-.active-menu {
-    padding: 0 3rem;
+.nav-content ul{
+    gap: 0;
+}
+
+.nav-content {
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.active-menu-mobile {
+    padding: 1.5rem;
     display: flex;
     color: black;
     width: 100vw;
+    height: 100vh;
     background-color: var(--white);
+
+    visibility: visible;
+    overflow: visible;
 }
 
 .menu-btn.search {
     height: 24px;
     width: 24px;
 }
-.menu-btn.search svg {
+/* .menu-btn.search svg {
     transform: translateY(3px);
-}
+} */
 .menu-btn.search:hover path {
     /* ________ WON'T WORK! ________ */
     fill: var(--black);
@@ -59,12 +90,32 @@ section {
 /* ---- Media Query ---- */
 
 @media screen and (min-width: 650px) {
+    header {
+        width: 100%;
+    }
     .nav-bar {
-        /* padding: 1.5rem 3rem 1.5 3rem; */
+        padding: 1.5rem 3rem 0 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: flex-start;
         position: relative;
         opacity: 0;
         transform: translateY(-100px);
+    }
+
+    .menu-btns, .logo {
+        visibility: visible;
+        overflow: visible;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        gap: 4rem;
     }
 
     .nav-content {
@@ -112,6 +163,18 @@ section {
     }
 }
 
+@media screen and (min-width: 1150px) {
+
+    ul {
+        gap: 6rem;
+    }
+
+    .nav-content ul{
+        text-align: right;
+        gap: 0;
+    }
+}
+
 /* ---- Hero Section || Start Frame ---- */
 
 .hero-section {
@@ -124,33 +187,27 @@ section {
 
 .heading-wrapper {
     z-index: 2;
-    top: 50%;
-    left: 50%;
+    /* top: 50%;
+    left: 50%; */
     position: absolute;
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 h1 {
-    /* top: 50%;
-    left: 50%; */
-    transform: translate(-50%, -50%);
     white-space: nowrap;
     pointer-events: none;
 }
 h2.smaller {
-    /* top: 50%;
-    left: 50%; */
-    transform: translate(-50%, -130%);
+    transform: translate(0%, -40%);
     white-space: nowrap;
     pointer-events: none;
 }
 
 h1::before {
     color: var(--bone);
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     height: 50%;
     content: attr(text-overlay);
     overflow: hidden;
@@ -158,8 +215,8 @@ h1::before {
 }
 h2.smaller::before {
     color: var(--bone);
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     height: 50%;
     /* content: attr(text-overlay); */
     overflow: hidden;
@@ -189,17 +246,26 @@ h2.smaller::before {
         flex-direction: row;
     }
 
+    .heading-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    .heading-wrapper h1 {
+        transform: translate(-50%, -50%);
+    }
+
     h2.smaller {
         transform: translate(-50%, -140%);
     }
 
-    h1::before {
+    h1::before, h2.smaller::before {
         width: 50%;
         height: 100%;
     }
+
     h2.smaller::before {
-        width: 50%;
-        height: 100%;
         content: attr(text-overlay);
     }
 
@@ -250,7 +316,7 @@ h2.smaller::before {
 
 .product-container {
     display: grid;
-    row-gap: 4rem;
+    row-gap: 5rem;
     column-gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
     /* grid-template-rows: repeat(6, 1fr); */
@@ -326,7 +392,9 @@ h2.smaller::before {
     }
     .product-container { 
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 0;
+        /* ____ TOMMI. Tycker nog vi ska ha lite row-gap ____ */
+        /* -------------------------------------------------- */
+        row-gap: 0rem;
     }
 
     .none {

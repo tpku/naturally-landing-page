@@ -25,11 +25,7 @@ h1,h2.smaller {
     font-family: 'Baskervville', serif;
 }
 
-ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
+
 
 ul a {
     font-size: 1.5rem;
@@ -50,12 +46,6 @@ ul a:hover, a, h1 {
     color: var(--green);
 }
 
-
-.nav-content ul{
-    text-align: right;
-    gap: 0;
-}
-
 h1 {
     font-size: 3rem;
     transition: font-size .50s linear; 
@@ -66,7 +56,7 @@ h1 {
 
 h2.smaller {
     top: -10px;
-    font-size: 1.5rem;
+    font-size: 1.53rem;
 }
 
 h2 {
@@ -79,11 +69,6 @@ h3 {
 
 
 @media screen and (min-width: 700px){
-
-    ul {
-        gap: 4rem;
-    }
-
     ul a {
         font-size: 1.5rem;
     }
@@ -96,29 +81,19 @@ h3 {
         -webkit-transition: font-size .50s linear; 
     }
     h2.smaller {
-        font-size: 2rem;
+        font-size: 2.03rem;
     }
 }
 
 @media screen and (min-width: 1150px) {
-
-    ul {
-        gap: 6rem;
-    }
-    
     ul a {
         font-size: 1.5rem;
     }
 
-    .nav-content ul{
-        text-align: right;
-        gap: 0;
-    }
 
     .nav-content li a {
         font-size: 1rem;
     }
-    
 }
 
 .product-title {

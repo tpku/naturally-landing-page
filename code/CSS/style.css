@@ -40,6 +40,18 @@ header {
     background-color: var(--white);
 }
 
+.menu-btn.search {
+    height: 24px;
+    width: 24px;
+}
+.menu-btn.search svg {
+    transform: translateY(3px);
+}
+.menu-btn.search:hover path {
+    /* ________ WON'T WORK! ________ */
+    fill: var(--black);
+}
+
 section {
     height: 100vh;
 }
@@ -62,9 +74,8 @@ section {
         right: 0;
         top: 65px;
         position: absolute;
-        opacity: 0;
-        /* visibility: hidden; */
-        transition: opacity .3s ease-in;
+        visibility: hidden;
+        overflow: hidden;
     }
 
     .nav-content ul {
@@ -79,7 +90,8 @@ section {
     .nav-content.contact.active, 
     .nav-content.store.active, 
     .nav-content.search.active  {
-        opacity: 1;
+        visibility: visible;
+        overflow: visible;
     }
 
     .nav-bar.active-desktop {
@@ -200,6 +212,7 @@ h1::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .product-container {
@@ -207,7 +220,7 @@ h1::before {
     row-gap: 4rem;
     column-gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    /* grid-template-rows: repeat(6, 1fr); */
 }
 
 .card {
@@ -247,7 +260,7 @@ h1::before {
 }
 
 .product-info .text-container .product-title {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .product-info .btn-container-index {
@@ -260,16 +273,6 @@ h1::before {
     background-color: var(--white);
     display: none;
 }
-
-/* .product-info.active-card {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 90vh;
-    opacity: 1;
-    transition: opacity .6s linear;
-} */
 
 /* ---- Media Query ---- */
 

@@ -36,12 +36,17 @@ ul a {
     color: var(--bone);
 }
 
-ul a:hover, a, h1, .nav-content a:hover {
+ul a:hover, a, h1 {
     color: var(--black);
 }
 
 .nav-content a {
     font-size: 1rem;
+    color: var(--green);
+}
+
+.nav-content a:hover {
+    font-weight: bold;
     color: var(--green);
 }
 
@@ -110,8 +115,14 @@ h3 {
 
 .product-title {
     color: var(--bone);
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+
 }
 
 .product-text {
     color: var(--white);
+    font-size: 1.5rem;
+    letter-spacing: 0.12rem;
+    line-height: 2.5rem;
 }

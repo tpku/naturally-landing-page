@@ -17,7 +17,7 @@ header, footer {
     font-family: 'Poppins', sans-serif;
 }
 
-h1 {
+h1,h2.smaller {
     font-family: 'Notable', sans-serif;
 }
 
@@ -57,11 +57,16 @@ ul a:hover, a, h1 {
 }
 
 h1 {
-    font-size: 4.7rem;
+    font-size: 3rem;
     transition: font-size .50s linear; 
     -o-transition: font-size .50s linear; 
     -moz-transition: font-size .50s linear; 
     -webkit-transition: font-size .50s linear; 
+}
+
+h2.smaller {
+    top: -10px;
+    font-size: 1.5rem;
 }
 
 h2 {
@@ -89,6 +94,9 @@ h3 {
         -o-transition: font-size .50s linear; 
         -moz-transition: font-size .50s linear; 
         -webkit-transition: font-size .50s linear; 
+    }
+    h2.smaller {
+        font-size: 2rem;
     }
 }
 

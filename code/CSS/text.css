@@ -74,14 +74,14 @@ h3 {
     }
     
     h1 {
-        font-size: 4rem;
+        font-size: 3.1rem;
         transition: font-size .50s linear; 
         -o-transition: font-size .50s linear; 
         -moz-transition: font-size .50s linear; 
         -webkit-transition: font-size .50s linear; 
     }
     h2.smaller {
-        font-size: 2.03rem;
+        font-size: 1.58rem;
     }
 }
 
@@ -90,9 +90,19 @@ h3 {
         font-size: 1.5rem;
     }
 
-
     .nav-content li a {
         font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+        transition: font-size .50s linear; 
+        -o-transition: font-size .50s linear; 
+        -moz-transition: font-size .50s linear; 
+        -webkit-transition: font-size .50s linear; 
+    }
+    h2.smaller {
+        font-size: 2.03rem;
     }
 }
 

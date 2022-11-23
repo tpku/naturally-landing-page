@@ -29,6 +29,7 @@ header {
 .menu-btns, .logo {
     visibility: hidden;
     overflow: hidden;
+    /* display: none; */
 }
 
 .hamburger {
@@ -107,6 +108,7 @@ section {
     .menu-btns, .logo {
         visibility: visible;
         overflow: visible;
+        /* display: flex; */
     }
 
     .hamburger {
@@ -189,9 +191,9 @@ section {
     z-index: 2;
     /* top: 50%;
     left: 50%; */
-    position: absolute;
     display: flex;
     flex-direction: column;
+    position: absolute;
 }
 
 h1 {
@@ -247,9 +249,9 @@ h2.smaller::before {
     }
 
     .heading-wrapper {
-        position: absolute;
         top: 50%;
         left: 50%;
+        transform: translate(0, -50%);
     }
 
     .heading-wrapper h1 {
@@ -319,7 +321,6 @@ h2.smaller::before {
     row-gap: 5rem;
     column-gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
-    /* grid-template-rows: repeat(6, 1fr); */
 }
 
 .card {
@@ -345,7 +346,7 @@ h2.smaller::before {
 
 .card .product-info {
     opacity: 0;
-    display: flex;
+    /* display: flex; */
 }
 
 .card:hover .product-info {
@@ -377,20 +378,22 @@ h2.smaller::before {
 
 @media screen and (min-width: 700px){
     .products-section {
-        padding: 0 2.5rem;
+        padding: 0 3rem;
     }
     .product-container {
+        max-width: 750px;
         padding: 2rem 0;
         grid-template-columns: repeat(1, 1fr);
         row-gap: 4rem;
         /* grid-template-rows: repeat(6, 1fr); */
     }
 }
-@media screen and (min-width: 1050px){
+@media screen and (min-width: 1150px){
     .products-section {
         padding: 0 5rem;
     }
     .product-container { 
+        max-width: 1450px;
         grid-template-columns: repeat(2, 1fr);
         /* ____ TOMMI. Tycker nog vi ska ha lite row-gap ____ */
         /* -------------------------------------------------- */

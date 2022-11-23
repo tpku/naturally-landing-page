@@ -25,8 +25,9 @@
         <nav class="nav-bar">
                 <div class="logo"><a href="">NATURALLY</a></div>
 
-                <ul class="menu-btn">
-                    <li><a class="menu-btn home" href="">Hem</a>
+                <ul class="menu-btns">
+                    <li>
+                        <a data-btn="home" class="menu-btn home" href="">Hem</a>
                         <div class="nav-content home">
                             <ul>
                                 <li><h3>Story</h3></li>
@@ -43,7 +44,7 @@
                     </li>
 
                     <li>
-                        <a class="menu-btn info" href="">Info</a>
+                        <a data-btn="info" class="menu-btn info" href="">Info</a>
                         <div class="nav-content info">
                             <ul>
                                 <li><h3>Hållbarhet</h3></li>
@@ -63,7 +64,7 @@
                     </li>
 
                     <li>
-                        <a class="menu-btn contact" href="">Kontakt</a>
+                        <a data-btn="contact" class="menu-btn contact" href="">Kontakt</a>
                         <div class="nav-content contact">
                             <ul>
                                 <li><h3>Besök oss på</h3></li>
@@ -81,7 +82,7 @@
                     </li>
 
                     <li>
-                        <a class="menu-btn store" href="">Butik</a>
+                        <a data-btn="store" class="menu-btn store" href="">Butik</a>
                         <div class="nav-content store">
                             <ul>
                                 <li><h3>Kollektioner</h3></li>
@@ -118,7 +119,18 @@
                     </li>
 
                     <li>
-                        <a class="menu-btn search" href=""><img src="/IMG/search.svg" alt="" srcset=""></a>
+                        <a data-btn="search" class="menu-btn search" href=""><img src="./IMG/search.svg" alt="" srcset=""></a>
+                        <div class="nav-content search">
+                            <ul>
+                                <li><h3>Sök på hemsidan</h3></li>
+                                <li><hr></li>
+                                <li>
+                                    <form action="">
+                                        <input type="text">
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
         </nav>
@@ -128,7 +140,9 @@
         <!-- Hero Section -->
         <section class="hero-section">
             <h1 text-overlay="NATURALLY">NATURALLY</h1>
-            <div class="hero-img-left"></div>
+            <div class="hero-img-left">
+                <img src="./" alt="">
+            </div>
             <div class="hero-img-right"></div>
         </section>
 

@@ -67,7 +67,8 @@ section {
         top: 65px;
         position: absolute;
         opacity: 0;
-        transition: opacity .2s linear;
+        /* visibility: hidden; */
+        transition: opacity .3s ease-in;
     }
 
     .nav-content ul {
@@ -76,23 +77,14 @@ section {
         padding-left: 1rem;
         width: 277px;
     }
-
-    .menu-btn.home:hover + .nav-content.home {
+    
+    .nav-content.home.active, 
+    .nav-content.info.active, 
+    .nav-content.contact.active, 
+    .nav-content.store.active, 
+    .nav-content.search.active  {
         opacity: 1;
     }
-
-    .menu-btn.info:hover + .nav-content.info {
-        opacity: 1;
-    }
-
-    .menu-btn.contact:hover + .nav-content.contact {
-        opacity: 1;
-    }
-
-    .menu-btn.store:hover + .nav-content.store {
-        opacity: 1;
-    }
-
 
     .nav-bar.active-desktop {
         background-color: var(--white);
@@ -101,7 +93,7 @@ section {
         height: 65px;
         opacity: 100%;
         transform: translateY(0);
-        transition: opacity, transform, height, .5s ease-out;
+        transition: opacity, transform, height, .6s ease-out;
         overflow: hidden;
     }
 
@@ -146,7 +138,7 @@ h1::before {
     background-color: var(--sand);
     height: 50%;
     width: 100%;
-    background-image: url(/IMG/shape-md.jpg);
+    background-image: url(../IMG/shape-md.jpg);
     background-position: bottom;
 }
 
@@ -154,7 +146,7 @@ h1::before {
     background-color: var(--green);
     height: 50%;
     width: 100%;
-    background-image: url(/IMG/tin-md.jpg);
+    background-image: url(../IMG/tin-md.jpg);
     background-position: top;
 }
 

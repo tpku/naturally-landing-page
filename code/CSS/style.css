@@ -166,6 +166,16 @@ section {
         transform: translateY(-100px);
     }
 
+    .logo {
+        position: inherit;
+        top: 4px;
+    }
+
+    .nav-bar .menu-btns {
+        margin: 0;
+        text-align: right;
+    }
+
     .menu-btns, .logo {
         visibility: visible;
         overflow: visible;

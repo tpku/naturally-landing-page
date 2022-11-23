@@ -9,6 +9,7 @@ window.addEventListener('scroll', function (e) {
   }
 });
 
+
 // Products Card Hover Effect
 const cardsHover = document.querySelectorAll(".card");
 const productInfo = document.querySelector(".product-info");

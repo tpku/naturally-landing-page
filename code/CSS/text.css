@@ -13,22 +13,16 @@ html {
     font-family: 'Baskervville', serif;
 }
 
-header {
+header, footer {
     font-family: 'Poppins', sans-serif;
 }
 
-.logo, h1 {
+h1 {
     font-family: 'Notable', sans-serif;
 }
 
-
 .btn {
     font-family: 'Baskervville', serif;
-}
-
-
-.logo {
-    font-size: 1.5rem;
 }
 
 ul {
@@ -42,7 +36,7 @@ ul a {
     color: var(--bone);
 }
 
-ul a:hover, a, h1 {
+ul a:hover, a, h1, .nav-content a:hover {
     color: var(--black);
 }
 
@@ -75,9 +69,6 @@ h3 {
 
 
 @media screen and (min-width: 700px){
-    .logo a {
-        font-size: 2rem;
-    }
 
     ul {
         gap: 4rem;

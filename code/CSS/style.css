@@ -21,9 +21,15 @@ header {
 }
 
 .nav-bar {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 2rem 1.5rem;
     display: flex;
+    flex-direction: column;
     position: relative;
+}
+
+.nav-bar .menu-btns {
+    margin-top: 8rem;
+    text-align: right;
 }
 
 .menu-btns, .logo {
@@ -32,7 +38,13 @@ header {
     /* display: none; */
 }
 
+.logo {
+    position: absolute;
+    top: 36px;
+}
+
 .hamburger {
+    z-index: 15;
     position: absolute;
     background-color: #4f5b4f42;
     width: 48px;
@@ -48,7 +60,7 @@ header {
 
 ul {
     list-style: none;
-    /* gap: 2rem; */
+    gap: 2rem;
 }
 
 .nav-content ul{
@@ -58,6 +70,7 @@ ul {
 .nav-content {
     visibility: hidden;
     overflow: hidden;
+    display: none;
 }
 
 .active-menu-mobile {
@@ -71,6 +84,54 @@ ul {
     visibility: visible;
     overflow: visible;
 }
+
+.active-menu-mobile .logo, .active-menu-mobile .menu-btns {
+    visibility: visible;
+    overflow: visible;
+}
+
+.active-menu-mobile .hamburger {
+    filter: invert(100);
+    background-color: black;
+}
+
+.active-menu-mobile h3 {
+    color: var(--green);
+}
+
+
+.active-menu-mobile .nav-content.home.active, 
+.active-menu-mobile .nav-content.info.active, 
+.active-menu-mobile .nav-content.contact.active, 
+.active-menu-mobile .nav-content.store.active, 
+.active-menu-mobile .nav-content.search.active  {
+        visibility: visible;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1rem 0;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+/* .active-menu-mobile a.home + .nav-content.home.active {
+    color: var(--black);
+} */
+
+.active-menu-mobile .nav-content.store.active a,
+.active-menu-mobile .nav-content.store.active hr,
+.active-menu-mobile .nav-content.info.active a,
+.active-menu-mobile .nav-content.info.active hr {
+    display: none;
+} 
+
+.active-menu-mobile .nav-content.home.active hr,
+.active-menu-mobile .nav-content.contact.active hr,
+.active-menu-mobile .nav-content.search.active hr {
+    display: none;
+} 
+
 
 .menu-btn.search {
     height: 24px;

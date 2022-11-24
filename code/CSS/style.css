@@ -273,6 +273,7 @@ h1::before {
 .trash {
     height: auto;
     background-image: linear-gradient(var(--white), var(--green));
+    padding-bottom: 375px;
 }
 .trash img {
     width: 100%;
@@ -293,8 +294,6 @@ h1::before {
 	display: flex;
 	gap: 24px;
 	flex-direction: column;
-    padding-inline: 24px;
-    padding-block: 24px;
 }
 
 .trash .text-container h2 {
@@ -330,7 +329,7 @@ h1::before {
     }
     .trash .text-container .colum  p {
         line-height: 1.45;
-        font-size: 1.5rem;        padding-bottom: 375px;
+        font-size: 1.5rem;
     }
     .trash .text-container .colum  p:last-child {
         grid-column: 2 / -1;

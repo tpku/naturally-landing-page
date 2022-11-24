@@ -272,17 +272,27 @@ h1::before {
 /* ---- Trash ---- */
 .trash {
     height: auto;
+    background-image: linear-gradient(#fff, #536560);
 }
 .trash img {
     width: 100%;
-    height: 250px;
+    aspect-ratio: 16/9;
     object-fit: cover;
+    margin-bottom: 24px;
 }
 
 .trash .text-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 24px 20px;
+    padding-inline: 24px;
+    padding-bottom: 116px;
+}
+
+.trash .text-container .colum {
+	display: flex;
+	gap: 24px;
+	flex-direction: column;
 }
 
 .trash .text-container h2 {
@@ -298,7 +308,7 @@ h1::before {
     .trash .text-container {
         grid-template-columns: repeat(2, 1fr);
         padding-inline: 80px;
-
+        padding-bottom: 375px;
     }
     .trash .text-container p:last-child {
         grid-column: 2 / -1;

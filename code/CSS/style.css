@@ -227,6 +227,12 @@ h1::before {
 
 /* ---- Media Query ---- */
 @media screen and (min-width: 800px) {
+    .signup-container h2 {
+        font-size: 48px;
+    }
+    .signup-container p {
+        font-size: 25px;
+    }
     .signup-container .signup-form {
         grid-template-columns: 1fr auto;
         align-items: center;

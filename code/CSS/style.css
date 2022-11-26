@@ -489,7 +489,7 @@ footer .footer-continer img {
 /* ---- Form ---- */
 input {
     background-color: var(--bone);
-    padding: 0.5rem 1rem;
+    padding: 0.5em 1em;
     border: none;
     width: 100%;
 }
@@ -499,10 +499,9 @@ input:focus-visible {
     border-radius: .1em;
 }
 
-.btn.large {
-    font-size: 2rem;
-}
-
-.btn.xlarge {
-    font-size: 3.31rem;
+@media screen and (min-width: 800px) {
+    input {
+        font-size: 1.5rem;
+        padding: 0.5em 1em;
+    }
 }

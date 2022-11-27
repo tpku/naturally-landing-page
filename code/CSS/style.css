@@ -422,9 +422,10 @@ h2.smaller::before {
 
 .signup-section::before, .signup-section::after {
     content: '';
-    width: 95%;
+    width: 90%;
     height: 2px;
     background-color: var(--bone);
+    margin: 0 5rem;
 }
 
 .signup-container h2 {

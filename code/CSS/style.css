@@ -571,7 +571,7 @@ h2.smaller::before {
     padding-bottom: 116px;
 }
 
-.trash .text-container .colum {
+.trash .text-container .column {
 	display: flex;
 	gap: 24px;
 	flex-direction: column;
@@ -582,7 +582,7 @@ h2.smaller::before {
     font-size: 2rem;
 }
 
-.trash-section .text-container .colum {
+.trash-section .text-container .column {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -595,7 +595,7 @@ h2.smaller::before {
 
 /* ---- Media Query ---- */
 @media screen and (min-width: 840px) {
-    .trash .text-container {
+    .trash-section .text-container {
         padding-inline: 80px;
         padding-top: 80px;
 

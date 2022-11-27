@@ -2,54 +2,23 @@
 font-family: 'Notable', sans-serif;
 font-family: 'Poppins', sans-serif; */
 
+h1, h2, h3, p, a, ul{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
 
 html {
     color: var(--black);
     font-family: 'Baskervville', serif;
 }
 
-h1, h2, h3, p, a, ul{
-    margin: 0;
-    text-decoration: none;
+header, footer {
+    font-family: 'Poppins', sans-serif;
 }
 
-.logo a {
+h1,h2.smaller {
     font-family: 'Notable', sans-serif;
-    font-size: 1.5rem;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-ul a {
-    font-size: 1.5rem;
-    color: var(--bone);
-}
-
-ul a:hover {
-    color: var(--black);
-}
-
-a {
-    color: var(--black);
-    font-family: Poppins;
-}
-
-h1 {
-    font-family: 'Notable', sans-serif;
-    color: var(--black);
-    font-size: 4.7rem;
-    transition: font-size .50s linear; 
-    -o-transition: font-size .50s linear; 
-    -moz-transition: font-size .50s linear; 
-    -webkit-transition: font-size .50s linear; 
-}
-
-h2 {
-    font-size: 1.5rem;
 }
 
 .btn {
@@ -57,19 +26,74 @@ h2 {
 }
 
 
-@media screen and (min-width: 800px){
-    .logo a {
-        font-size: 2rem;
-    }
 
-    ul {
-        gap: 1rem;
-    }
+ul a {
+    font-size: 1.5rem;
+    color: var(--bone);
+}
 
+ul a:hover, a, h1 {
+    color: var(--black);
+}
+
+.nav-content a {
+    font-size: 1rem;
+    color: var(--green);
+}
+
+.nav-content a:hover {
+    font-weight: bold;
+    color: var(--green);
+}
+
+h1 {
+    font-size: 3rem;
+    transition: font-size .50s linear; 
+    -o-transition: font-size .50s linear; 
+    -moz-transition: font-size .50s linear; 
+    -webkit-transition: font-size .50s linear; 
+}
+
+h2.smaller {
+    top: -10px;
+    font-size: 1.53rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+
+@media screen and (min-width: 700px){
     ul a {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
+    h1 {
+        font-size: 3.1rem;
+        transition: font-size .50s linear; 
+        -o-transition: font-size .50s linear; 
+        -moz-transition: font-size .50s linear; 
+        -webkit-transition: font-size .50s linear; 
+    }
+    h2.smaller {
+        font-size: 1.58rem;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    ul a {
+        font-size: 1.5rem;
+    }
+
+    .nav-content li a {
+        font-size: 1rem;
+    }
+
     h1 {
         font-size: 4rem;
         transition: font-size .50s linear; 
@@ -77,31 +101,21 @@ h2 {
         -moz-transition: font-size .50s linear; 
         -webkit-transition: font-size .50s linear; 
     }
-
-    a {
-        color: var(--black);
+    h2.smaller {
+        font-size: 2.03rem;
     }
-}
-
-@media screen and (min-width: 1150px) {
-    .logo a {
-        font-size: 2.5rem;
-    }
-
-    ul {
-        gap: 4.8rem;
-    }
-
-    ul a {
-        font-size: 2.5rem;
-    }
-    
 }
 
 .product-title {
     color: var(--bone);
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+
 }
 
 .product-text {
     color: var(--white);
+    font-size: 1.5rem;
+    letter-spacing: 0.12rem;
+    line-height: 2.5rem;
 }

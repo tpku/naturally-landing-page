@@ -560,6 +560,7 @@ h2.smaller::before {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
+    margin-bottom: 24px;
 }
 
 .trash-section .text-container {
@@ -567,7 +568,13 @@ h2.smaller::before {
     grid-template-columns: repeat(1, 1fr);
     gap: 24px 20px;
     padding-inline: 24px;
-    padding-block: 24px;
+    padding-bottom: 116px;
+}
+
+.trash .text-container .colum {
+	display: flex;
+	gap: 24px;
+	flex-direction: column;
 }
 
 .trash-section .text-container h2 {
@@ -588,14 +595,16 @@ h2.smaller::before {
 
 /* ---- Media Query ---- */
 @media screen and (min-width: 840px) {
-    .trash-section .text-container {
-        padding-inline: 5rem;
-        padding-block: 5rem;
+    .trash .text-container {
+        padding-inline: 80px;
+        padding-top: 80px;
+
     }
 }
 @media screen and (min-width: 1100px) {
     .trash-section .text-container{
         grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 378px;
     }
     .trash-section .text-container h2 {
         grid-column: 1 / -1;

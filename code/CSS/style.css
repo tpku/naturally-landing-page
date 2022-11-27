@@ -73,6 +73,10 @@ ul {
     display: none;
 }
 
+.nav-bar.active-mobile:not(.hamburger) {
+    display: none;
+}
+
 .active-mobile {
     padding: 1.5rem;
     display: flex;

@@ -8,13 +8,10 @@ const subMenuBtns = document.querySelectorAll(".nav-content")
 
 function checkScreenWidth(maxWidth) {
   if (maxWidth.matches) {
-
     // Mobile Scroll max-width 650px
     window.addEventListener('scroll', function (e) {
       if (window.scrollY > document.documentElement.clientHeight) {
-        navBar.style.display = "flex";
-      } else {
-        navBar.style.display = "none";
+        hamburgerMenu.classList.add("active");
       }
     });
     // Hamburger Menu Toggle Open & Close
@@ -58,3 +55,28 @@ function checkScreenWidth(maxWidth) {
 const maxWidth = window.matchMedia("(max-width: 650px)")
 checkScreenWidth(maxWidth) // Call listener function at run time
 maxWidth.addListener(checkScreenWidth) // Attach listener function on state changes
+
+
+
+
+const rightBottomContainer = document.querySelector(".hero-img-right");
+const leftTopContainer = document.querySelector(".hero-img-left");
+const heroRightBottom = document.querySelector(".hero-img-right img");
+const heroLeftTop = document.querySelector(".hero-img-left img");
+const heroWrapper = document.querySelector(".heading-wrapper");
+
+// Alternativ för DESKTOP
+// document.addEventListener("scroll", (e) => {
+//   rightBottomContainer.style.transform = `translateX(${1 + window.scrollY * 1 + "px"})`;
+//   heroRightBottom.style.transform = `scale(${1 + window.scrollY * 0.001})`;
+//   leftTopContainer.style.transform = `translateX(${1 + window.scrollY * -1 + "px"})`;
+//   heroLeftTop.style.transform = `scale(${1 + window.scrollY * 0.001})`;
+// }) 
+
+// // Alternativ för MOBIL
+// document.addEventListener("scroll", (e) => {
+//   leftTopContainer.style.transform = `translateY(${1 + window.scrollY * -1 + "px"})`;
+//   rightBottomContainer.style.transform = `translateY(${1 + window.scrollY * 3 + "px"})`;
+//   heroLeftTop.style.transform = `scale(${1 + window.scrollY * 0.005})`;
+//   heroRightBottom.style.transform = `scale(${1 + window.scrollY * 0.005})`;
+// })

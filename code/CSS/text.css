@@ -13,29 +13,19 @@ html {
     font-family: 'Baskervville', serif;
 }
 
-header {
+header, footer {
     font-family: 'Poppins', sans-serif;
 }
 
-.logo, h1 {
+h1,h2.smaller {
     font-family: 'Notable', sans-serif;
 }
-
 
 .btn {
     font-family: 'Baskervville', serif;
 }
 
 
-.logo {
-    font-size: 1.5rem;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
 
 ul a {
     font-size: 1.5rem;
@@ -51,38 +41,59 @@ ul a:hover, a, h1 {
     color: var(--green);
 }
 
-
-.nav-content ul{
-    text-align: right;
-    gap: 0;
+.nav-content a:hover {
+    font-weight: bold;
+    color: var(--green);
 }
 
 h1 {
-    font-size: 4.7rem;
+    font-size: 3rem;
     transition: font-size .50s linear; 
     -o-transition: font-size .50s linear; 
     -moz-transition: font-size .50s linear; 
     -webkit-transition: font-size .50s linear; 
 }
 
+h2.smaller {
+    top: -10px;
+    font-size: 1.53rem;
+}
+
 h2 {
     font-size: 1.5rem;
 }
 
+h3 {
+    font-size: 1rem;
+}
+
 
 @media screen and (min-width: 700px){
-    .logo a {
-        font-size: 2rem;
-    }
-
-    ul {
-        gap: 4rem;
-    }
-
     ul a {
         font-size: 1.5rem;
     }
     
+    h1 {
+        font-size: 3.1rem;
+        transition: font-size .50s linear; 
+        -o-transition: font-size .50s linear; 
+        -moz-transition: font-size .50s linear; 
+        -webkit-transition: font-size .50s linear; 
+    }
+    h2.smaller {
+        font-size: 1.58rem;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    ul a {
+        font-size: 1.5rem;
+    }
+
+    .nav-content li a {
+        font-size: 1rem;
+    }
+
     h1 {
         font-size: 4rem;
         transition: font-size .50s linear; 
@@ -90,33 +101,21 @@ h2 {
         -moz-transition: font-size .50s linear; 
         -webkit-transition: font-size .50s linear; 
     }
-}
-
-@media screen and (min-width: 1150px) {
-
-    ul {
-        gap: 6rem;
+    h2.smaller {
+        font-size: 2.03rem;
     }
-    
-    ul a {
-        font-size: 1.5rem;
-    }
-
-    .nav-content ul{
-        text-align: right;
-        gap: 0;
-    }
-
-    .nav-content li a {
-        font-size: 1rem;
-    }
-    
 }
 
 .product-title {
     color: var(--bone);
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+
 }
 
 .product-text {
     color: var(--white);
+    font-size: 1.5rem;
+    letter-spacing: 0.12rem;
+    line-height: 2.5rem;
 }

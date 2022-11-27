@@ -22,11 +22,18 @@
 <body>
     <header>
         <!-- Navbar Section -->
-        <nav class="nav-bar">
-                <div class="logo"><a href="">NATURALLY</a></div>
+        <nav class="nav-bar
+        ">
+                <div class="logo">
+                    <img src="./IMG/logo.svg" alt="Naturally logo">
+                </div>
 
-                <ul class="menu-btn">
-                    <li><a class="menu-btn home" href="">Hem</a>
+                <div class="hamburger"><img src="./IMG/burger.svg" alt="">
+                </div>
+
+                <ul class="menu-btns">
+                    <li>
+                        <a data-btn="home" class="menu-btn home" href="">Hem</a>
                         <div class="nav-content home">
                             <ul>
                                 <li><h3>Story</h3></li>
@@ -36,52 +43,14 @@
                             <ul>
                                 <li><h3>Språk</h3></li>
                                 <li><hr></li>
-                                <li><a href="">Svenska</a></li>
+                                <li><a href="">* Svenska</a></li>
                                 <li><a href="">English</a></li>
                             </ul>
                         </div>
                     </li>
 
                     <li>
-                        <a class="menu-btn info" href="">Info</a>
-                        <div class="nav-content info">
-                            <ul>
-                                <li><h3>Hållbarhet</h3></li>
-                                <li><hr></li>
-                                <li><a href="">Återvinning</a></li>
-                                <li><a href="">Bakom</a></li>
-                            </ul>
-                            <ul>
-                                <li><h3>Vår väg</h3></li>
-                                <li><hr></li>
-                                <li><a href="">Start</a></li>
-                                <li><a href="">Sammarbeten</a></li>
-                                <li><a href="">Var vi är nu</a></li>
-                                <li><a href="">Våra mål</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a class="menu-btn contact" href="">Kontakt</a>
-                        <div class="nav-content contact">
-                            <ul>
-                                <li><h3>Besök oss på</h3></li>
-                                <li><hr></li>
-                                <li><a href="">Göketorpsgatan 19A</a></li>
-                                <li><a href="">413 22 Göteborg SWEDEN</a></li>
-                            </ul>
-                            <ul>
-                                <li><h3>Kontaktinformation</h3></li>
-                                <li><hr></li>
-                                <li><a href="">naturally@info.com</a></li>
-                                <li><a href="">010-399 234 21</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a class="menu-btn store" href="">Butik</a>
+                        <a data-btn="store" class="menu-btn store" href="">Butik</a>
                         <div class="nav-content store">
                             <ul>
                                 <li><h3>Kollektioner</h3></li>
@@ -118,7 +87,61 @@
                     </li>
 
                     <li>
-                        <a class="menu-btn search" href=""><img src="/IMG/search.svg" alt="" srcset=""></a>
+                        <a data-btn="info" class="menu-btn info" href="">Info</a>
+                        <div class="nav-content info">
+                            <ul>
+                                <li><h3>Hållbarhet</h3></li>
+                                <li><hr></li>
+                                <li><a href="">Återvinning</a></li>
+                                <li><a href="">Bakom</a></li>
+                            </ul>
+                            <ul>
+                                <li><h3>Vår väg</h3></li>
+                                <li><hr></li>
+                                <li><a href="">Start</a></li>
+                                <li><a href="">Sammarbeten</a></li>
+                                <li><a href="">Var vi är nu</a></li>
+                                <li><a href="">Våra mål</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a data-btn="contact" class="menu-btn contact" href="">Kontakt</a>
+                        <div class="nav-content contact">
+                            <ul>
+                                <li><h3>Besök oss på</h3></li>
+                                <li><hr></li>
+                                <li><a href="">Göketorpsgatan 19A <br>413 22 Göteborg SWEDEN</a></li>
+                            </ul>
+                            <ul>
+                                <li><h3>Kontaktinformation</h3></li>
+                                <li><hr></li>
+                                <li><a href="">naturally@info.com</a></li>
+                                <li><a href="">010-399 234 21</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <a data-btn="search" class="menu-btn search" href="">
+                            <!-- <img src="./IMG/search.svg" alt="" srcset=""> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="none">
+                                <path fill="#CEC7B9" fill-rule="evenodd" stroke="#CEC7B9" stroke-width="2" d="M19.753 20.399c-1.963 1.432-4.432 2.285-7.114 2.285-6.398 0-11.584-4.854-11.584-10.842S6.24 1 12.639 1c6.397 0 11.584 4.854 11.584 10.842 0 3.099-1.39 5.894-3.617 7.87l4.449 4.58-.832.708-4.47-4.601zm3.611-8.557c0 5.545-4.802 10.04-10.725 10.04-5.924 0-10.726-4.495-10.726-10.04 0-5.544 4.802-10.039 10.726-10.039 5.923 0 10.725 4.495 10.725 10.04z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <div class="nav-content search">
+                            <ul>
+                                <li><h3>Sök på hemsidan</h3></li>
+                                <li><hr></li>
+                                <li>
+                                    <form action="">
+                                        <input type="text">
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
         </nav>
@@ -127,8 +150,12 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section">
-            <h1 text-overlay="NATURALLY">NATURALLY</h1>
-            <div class="hero-img-left"></div>
+            <div class="heading-wrapper">
+                <h1 text-overlay="NATURALLY">NATURALLY</h1>
+                <h2 class="smaller" text-overlay="UNATURALLY NATURAL">UNATURALLY NATURAL</h2>
+            </div>
+            <div class="hero-img-left">
+            </div>
             <div class="hero-img-right"></div>
         </section>
 
@@ -154,7 +181,7 @@
                     <img src="./IMG/foil-md.jpg" alt="">
                     <div class="product-info">
                         <div class="text-container">
-                            <h3 class="product-title">Title Klänning</h3>
+                            <h3 class="product-title">Landvetter</h3>
                             <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit reprehenderit eaque tempora esse at rerum officiis iusto rem quasi excepturi porro molestiae, deleniti exercitationem quisquam laborum nesciunt inventore labore dolore expedita pariatur itaque alias aut. Quidem fugit quae repellat quis necessitatibus numquam, earum autem iure error. Id quisquam libero magni.</p>
                         </div>
                         <div class="btn-container-index">
@@ -171,8 +198,8 @@
                     <img src="./IMG/foil-md.jpg" alt="">
                         <div class="product-info">
                             <div class="text-container product-hover">
-                                <h3 class="product-title">Title</h3>
-                                <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit reprehenderit eaque tempora esse at rerum officiis iusto rem quasi excepturi porro molestiae, deleniti exercitationem quisquam laborum nesciunt inventore labore dolore expedita pariatur itaque alias aut. Quidem fugit quae repellat quis necessitatibus numquam, earum autem iure error. Id quisquam libero magni.</p>
+                                <h3 class="product-title">Säve</h3>
+                                <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit reprehenderit eaque tempora esse at rerum officiis iusto rem quasi excepturi porro molestiae, deleniti exercitationem quisquam laborum nesciunt inventore labore dolore expedita pariatur itaque alias aut.</p>
                             </div>
                             <div class="btn-container-index product-hover">
                                 <button class="btn active test-btn"><span>Läs mer</span></button>
@@ -182,26 +209,68 @@
                 </article>
 
                 <!-- Third Product card -->
-                <article class="card"></article>
+                <article class="card">
+                    <img src="./IMG/foil-md.jpg" alt="">
+                        <div class="product-info">
+                            <div class="text-container product-hover">
+                                <h3 class="product-title">Arlanda</h3>
+                                <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit reprehenderit eaque tempora esse at rerum officiis iusto rem quasi excepturi porro molestiae, deleniti exercitationem quisquam laborum nesciunt inventore labore dolore expedita pariatur itaque alias aut.</p>
+                            </div>
+                            <div class="btn-container-index product-hover">
+                                <button class="btn active test-btn"><span>Läs mer</span></button>
+                                <button class="btn active test-btn"><span>Lägg till i varukorgen</span></button>
+                            </div>
+                        </div>
+                </article>
                 <article class="none"></article>
 
                 <!-- Fourth Product card -->
                 <article class="none"></article>
-                <article class="card"></article>
+                <article class="card">
+                    <img src="./IMG/foil-md.jpg" alt="">
+                        <div class="product-info">
+                            <div class="text-container product-hover">
+                                <h3 class="product-title">Kastrup</h3>
+                                <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit reprehenderit eaque tempora esse at rerum officiis iusto rem quasi excepturi porro molestiae, deleniti exercitationem quisquam laborum nesciunt inventore labore dolore expedita pariatur itaque alias aut.</p>
+                            </div>
+                            <div class="btn-container-index product-hover">
+                                <button class="btn active test-btn"><span>Läs mer</span></button>
+                                <button class="btn active test-btn"><span>Lägg till i varukorgen</span></button>
+                            </div>
+                        </div>
+                </article>
 
                 <!-- Fifth Product card -->
-                <article class="card"></article>
-                <article class="none"></article>
+                <!-- <article class="card"></article>
+                <article class="none"></article> -->
 
                 <!-- Sixth Product card -->
-                <article class="none"></article>
-                <article class="card"></article>
+                <!-- <article class="none"></article>
+                <article class="card"></article> -->
+            </div>
+        </section>
+
+        <!-- Trash Section -->
+        <section class="trash-section">
+            <img src="IMG/shape-sm.jpg" alt="">
+
+            <div class="text-container">
+                <h2>Sopor <br> en oandlig källa?</h2>
+                <div class="column">
+                    <p>Visste du att en person i genomsnitt varje år slänger 7.5 kg textilier varje år? Det innebär att materialet inte tas tillvara som en värdefull resurs genom att återanvändas eller materialåtervinnas. Över 90 procent av all klimatpåverkan från svensk textilkonsumtion är i dagsläget kopplat till inköp av nyproducerade varor (procentsatsen beräknar klimatpåverkan från både produktion och konsumenternas transport till och från butik för inköpet).</p>
+                    <p><b>I Sverige ökade</b> inköpen av nyproducerad textil i början av 2000-talet från 10,7 kilo till cirka 14 kilo textil per person och år. År 2019 konsumerade varje svensk 13,7 kilo kläder och hemtextil. Det innebär att omkring 141 100 ton kläder och hemtextil sattes på den svenska marknaden (i denna konsumtionsdata ingår enbart företagens import, inte privatpersoners import från annat EU-land).</p>
+                </div>
+                <div class="column">
+                    <p><b>Här på naturally</b> arbetar vi ständigt för att nå en mer hållbar miljö inom textilindustrin. Vi vill nå en punkt där människor handlar med hjärtat utan att behöva tänka på konsekvenserna. Vi vill hjälpa dig att hjälpa alla. Våra kollektioner testar gränserna och vi söker ständigt efter bättre och mer vågade sätt utvinna kontroversiella material. Vi har t.ex. funnit det revolutionerade sättet att göra en tråd av lithium, kvicksilver och koppar amalgam som är näst intill oförstördbar samt väger mindre än 1 g per kubikmeter. Det är det tunnaste massproducerade materialet i världhistorien.</p>
+                    <p><b>Alla våra resurser</b> kommer ursprungligen från naturen vilket innebär att det också är på bekostnad av naturen. Det enda vi gör är att ta till vara på allt vad innebär skräp för att också se till att vi inte tar mer än vi behöver. Ända sedan John Doe uppfann tekniken att giftinkapsla material för att inte skada varken människor, djur eller natur.</p>
+                    <p><b>Unnaturally Natural</b> helt enkelt!</p>
+                </div>
             </div>
         </section>
 
     </main>
     <footer>
-        <div class="footer-continer">
+        <div class="footer-container">
             <h3>Information</h3>
             <p>Om du tänker dig en naturlig känsla som ger känsla av framtiden så tänker du rätt. Naturally har tagit fram en helt ny produktserie för dig som är medveten om vad du köper. Köp smart. Köp så att det är hållbart för framtiden. Och låt känslan av naturlighet vara med dig.</p>
             <div class="social">
@@ -210,7 +279,7 @@
                 <a href=""><i class="fa-brands fa-linkedin"></i></a>
                 <a href=""><i class="fa-brands fa-square-instagram"></i></a>
             </div>
-            <img src="/IMG/logo.svg" alt="Naturally logo">
+            <img src="./IMG/logo.svg" alt="Naturally logo">
         </div>
     </footer>
     <script src="script.js"></script>

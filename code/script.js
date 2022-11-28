@@ -5,13 +5,14 @@ const hamburgerMenu = document.querySelector(".hamburger");
 const menuBtns = document.querySelectorAll(".menu-btn")
 const subMenuBtns = document.querySelectorAll(".nav-content")
 
+// const subMenuClicks = document.querySelectorAll(".menu-content ul li a")
+
 // ____ PARALLAX ____ 
 const rightBottomContainer = document.querySelector(".hero-img-right");
 const leftTopContainer = document.querySelector(".hero-img-left");
 const heroRightBottom = document.querySelector(".hero-img-right img");
 const heroLeftTop = document.querySelector(".hero-img-left img");
 const heroWrapper = document.querySelector(".heading-wrapper");
-
 
 function checkScreenWidth(maxWidth) {
   if (maxWidth.matches) {
@@ -29,6 +30,18 @@ function checkScreenWidth(maxWidth) {
     menuBtns.forEach(menuBtn => {
       menuBtn.addEventListener("click", (e) => {
         subMenuBtns.forEach(subMenuBtn => {
+          if (navBar.classList.contains("active-mobile")) {
+            // subMenusClicks.forEach(subMenuClick => {
+            //   subMenuClick.addEventListener("click", (e) => {
+            //     navBar.classList.remove("active-mobile");
+            //   });
+            // });
+
+
+            // subMenuClick.addEventListener("click", (e) => {
+            //   navBar.classList.remove("active-mobile");
+            // });
+          }
           subMenuBtn.classList.remove("active");
         });
         let nextSibling = e.target.nextElementSibling;

@@ -505,7 +505,7 @@ h2.smaller::before {
 
 .product-container {
     display: grid;
-    row-gap: 5rem;
+    /* row-gap: 5rem; */
     column-gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
 }
@@ -513,14 +513,6 @@ h2.smaller::before {
 .card{
     position: relative;
     height: 90vh;
-    /* filter: drop-shadow(2px 2px 17px rgba(0, 0, 0, 0.55)); */
-    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.55);
-}
-
-article:is(:has(fieldset))  {
-    display: flex;
-    align-items: center;
-    box-shadow: none;
 }
 
 .card img {
@@ -529,6 +521,7 @@ article:is(:has(fieldset))  {
     height: 100%;
     object-fit: cover;
     position: absolute;
+    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.55);
     filter: brightness(100%);
     transition: filter .6s ease-out; 
 }
@@ -568,24 +561,46 @@ article:is(:has(fieldset))  {
 }
 
 .card .card_info {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 29px;
 
     border: 2px solid var(--bone);
+    border-top: none;
+    border-right: none;
     padding: 21px;
     margin-inline: 24px;
     margin-bottom: 32px;
 }
 
-.card .card_info legend {
+.card .card_info::after {
+    position: absolute;
+    right: 0px;
+    bottom: 21px;
+    content: '';
+    width: 2px;
+    height: 60%;
+    /* transform: translateY(27%); */
+    background-color: var(--bone);
+}
+
+.card .card_info span {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    background-color: var(--white);
     color: var(--bone);
 }
 
 .card .card_info h3 {
+    align-self: end;
     font-size: 16px;
 }
 .card .card_info p {
+    position: absolute;
+    top: 185px;
+    left: 0;
     line-height: 30px;
     letter-spacing: 0.22em;
 }
@@ -600,6 +615,10 @@ article:is(:has(fieldset))  {
         max-width: 750px;
         padding: 2rem 0;
         row-gap: 4rem;
+    }
+
+    .card .card_info p {
+        position: unset;
     }
 }
 @media screen and (min-width: 1150px){

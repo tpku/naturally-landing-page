@@ -22,6 +22,55 @@ main>img {
     position: fixed;
 }
 
+/* Temporary */
+.test-btn {
+    background-color: var(--white);
+    color: var(--bone);
+}
+
+.btn:hover span {
+    transform: scale(1.1);
+}
+
+.btn:active {
+    background-color: #48342A;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.32);
+    
+    /* Kanske det inte ska vara en transition */
+    /* transition: .4s box-shadow ease-out; */
+}
+
+.btn.large {
+    font-size: 2rem;
+}
+
+.btn.xlarge {
+    font-size: 3.31rem;
+}
+
+/* ---- Form ---- */
+input {
+    font-family: 'Baskervville', serif;
+    color: var(--sand);
+    background-color: var(--black);
+    padding: 1em 1.5em;
+    border: none;
+    width: 100%;
+    font-size: 1.125rem;
+}
+
+
+input:focus-visible {
+    outline: 2px solid blue;
+    border-radius: .1em;
+}
+
+@media screen and (min-width: 800px) {
+    input {
+        font-size: 1.5rem;
+    }
+}
+
 header {
     width: 100%;
     z-index: 10;
@@ -169,12 +218,13 @@ ul {
     height: 24px;
     width: 24px;
 }
-/* .menu-btn.search svg {
-    transform: translateY(3px);
-} */
+
+.menu-btn.search svg {
+    transform: translateY(5px);
+}
+
 .menu-btn.search:hover path {
-    /* ________ WON'T WORK! ________ */
-    fill: var(--black);
+    stroke: var(--black);
 }
 
 section {
@@ -405,17 +455,23 @@ h2.smaller::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: var(--sand);
     align-items: center;
     gap: 16px;
 }
 
-.signup-container {
+.btn.signup-btn {
+    color: var(--sand);
+    font-size: 1.125rem;
+}
 
+.signup-container {
+    
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--white);
+    background-color: var(--green);
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
     padding: 1rem 1.5rem;
     width: 100%;
@@ -430,7 +486,13 @@ h2.smaller::before {
 }
 
 .signup-container h2 {
-    font-size: 1.9rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.signup-container > p {
+    font-size: 1.125rem;
+    color: var(--sand);
 }
 
 .signup-container .signup-form {
@@ -454,21 +516,27 @@ h2.smaller::before {
         gap: 32px;
     }
 
+    .btn.signup-btn {
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+
     .signup-container h2 {
         font-size: 48px;
+        letter-spacing: 2px;
     }
     .signup-container p {
-        font-size: 25px;
+        font-size: 24px;
     }
     .signup-container .signup-form {
         grid-template-columns: 1fr auto;
         align-items: center;
         gap: 12px 21px;
-        width: 60%;
+        width: 65%;
     }
     .signup-container .signup-form label {
         grid-column: 1/2;
-        font-size: 19px;
+        font-size: 18px;
     }
     .signup-container .signup-form button {
         grid-column: 2/-1;
@@ -483,8 +551,10 @@ h2.smaller::before {
         max-width: 100%;
         padding: 60px 0.65rem;
     }
+
     .signup-container h2 {
         font-size: 102px;
+        letter-spacing: 5px;
     }
     .signup-container p {
         font-size: 39px;
@@ -675,7 +745,7 @@ fieldset:has(.card)  {
     }
     .trash-section .text-container h2 {
         grid-column: 1 / -1;
-        font-size: 6.5rem;
+        font-size: 6.375rem;
     }
     .trash-section .text-container .column  p {
         line-height: 1.45;
@@ -763,47 +833,3 @@ footer .footer-container img {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.32);
 }
 
-/* Temporary */
-.test-btn {
-    background-color: var(--white);
-    color: var(--bone);
-}
-
-.btn:hover span {
-    transform: scale(1.1);
-}
-
-.btn:active {
-    background-color: #48342A;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.32);
-    
-    /* Kanske det inte ska vara en transition */
-    /* transition: .4s box-shadow ease-out; */
-}
-
-.btn.large {
-    font-size: 2rem;
-}
-
-.btn.xlarge {
-    font-size: 3.31rem;
-}
-
-/* ---- Form ---- */
-input {
-    background-color: var(--bone);
-    padding: 1em 1.5em;
-    border: none;
-    width: 100%;
-}
-
-input:focus-visible {
-    outline: 2px solid blue;
-    border-radius: .1em;
-}
-
-@media screen and (min-width: 800px) {
-    input {
-        font-size: 1.3rem;
-    }
-}

@@ -511,13 +511,16 @@ h2.smaller::before {
 }
 
 .card{
+    position: relative;
     height: 90vh;
-    filter: drop-shadow(2px 2px 17px rgba(0, 0, 0, 0.55));    
+    /* filter: drop-shadow(2px 2px 17px rgba(0, 0, 0, 0.55)); */
+    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.55);
 }
 
-fieldset:has(.card)  {
+article:is(:has(fieldset))  {
     display: flex;
     align-items: center;
+    box-shadow: none;
 }
 
 .card img {

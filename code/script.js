@@ -5,6 +5,13 @@ const hamburgerMenu = document.querySelector(".hamburger");
 const menuBtns = document.querySelectorAll(".menu-btn")
 const subMenuBtns = document.querySelectorAll(".nav-content")
 
+// ____ PARALLAX ____ 
+const rightBottomContainer = document.querySelector(".hero-img-right");
+const leftTopContainer = document.querySelector(".hero-img-left");
+const heroRightBottom = document.querySelector(".hero-img-right img");
+const heroLeftTop = document.querySelector(".hero-img-left img");
+const heroWrapper = document.querySelector(".heading-wrapper");
+
 
 function checkScreenWidth(maxWidth) {
   if (maxWidth.matches) {
@@ -28,6 +35,15 @@ function checkScreenWidth(maxWidth) {
         nextSibling.classList.add("active");
       })
     });
+
+    // // Alternativ för MOBIL
+    // ____ TEST FÖR PARALLAX ____
+    document.addEventListener("scroll", (e) => {
+      leftTopContainer.style.transform = `translateY(${1 + window.scrollY * -1 + "px"})`;
+      rightBottomContainer.style.transform = `translateY(${1 + window.scrollY * 3 + "px"})`;
+      heroLeftTop.style.transform = `scale(${1 + window.scrollY * 0.005})`;
+      heroRightBottom.style.transform = `scale(${1 + window.scrollY * 0.005})`;
+    });
   } 
   else 
   {
@@ -49,6 +65,14 @@ function checkScreenWidth(maxWidth) {
         nextSibling.classList.add("active");
       })
     });
+    // Alternativ för DESKTOP
+    // ____ TEST FÖR PARALLAX ____
+    document.addEventListener("scroll", (e) => {
+      rightBottomContainer.style.transform = `translateX(${1 + window.scrollY * 1 + "px"})`;
+      heroRightBottom.style.transform = `scale(${1 + window.scrollY * 0.001})`;
+      leftTopContainer.style.transform = `translateX(${1 + window.scrollY * -1 + "px"})`;
+      heroLeftTop.style.transform = `scale(${1 + window.scrollY * 0.001})`;
+    }) 
   }
 }
 
@@ -56,27 +80,3 @@ const maxWidth = window.matchMedia("(max-width: 650px)")
 checkScreenWidth(maxWidth) // Call listener function at run time
 maxWidth.addListener(checkScreenWidth) // Attach listener function on state changes
 
-
-
-
-const rightBottomContainer = document.querySelector(".hero-img-right");
-const leftTopContainer = document.querySelector(".hero-img-left");
-const heroRightBottom = document.querySelector(".hero-img-right img");
-const heroLeftTop = document.querySelector(".hero-img-left img");
-const heroWrapper = document.querySelector(".heading-wrapper");
-
-// Alternativ för DESKTOP
-// document.addEventListener("scroll", (e) => {
-//   rightBottomContainer.style.transform = `translateX(${1 + window.scrollY * 1 + "px"})`;
-//   heroRightBottom.style.transform = `scale(${1 + window.scrollY * 0.001})`;
-//   leftTopContainer.style.transform = `translateX(${1 + window.scrollY * -1 + "px"})`;
-//   heroLeftTop.style.transform = `scale(${1 + window.scrollY * 0.001})`;
-// }) 
-
-// // Alternativ för MOBIL
-// document.addEventListener("scroll", (e) => {
-//   leftTopContainer.style.transform = `translateY(${1 + window.scrollY * -1 + "px"})`;
-//   rightBottomContainer.style.transform = `translateY(${1 + window.scrollY * 3 + "px"})`;
-//   heroLeftTop.style.transform = `scale(${1 + window.scrollY * 0.005})`;
-//   heroRightBottom.style.transform = `scale(${1 + window.scrollY * 0.005})`;
-// })

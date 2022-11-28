@@ -1,9 +1,8 @@
 // Navbar Scroll Event
 const navBar = document.querySelector(".nav-bar");
 const hamburgerMenu = document.querySelector(".hamburger");
-
-const menuBtns = document.querySelectorAll(".menu-btn")
-const subMenuBtns = document.querySelectorAll(".nav-content")
+const menuBtns = document.querySelectorAll(".menu-btn");
+const subMenuBtns = document.querySelectorAll(".nav-content");
 
 // const subMenuClicks = document.querySelectorAll(".menu-content ul li a")
 
@@ -14,22 +13,32 @@ const heroRightBottom = document.querySelector(".hero-img-right img");
 const heroLeftTop = document.querySelector(".hero-img-left img");
 const heroWrapper = document.querySelector(".heading-wrapper");
 
+
 function checkScreenWidth(maxWidth) {
   if (maxWidth.matches) {
+
     // Mobile Scroll max-width 650px
     window.addEventListener('scroll', function (e) {
       if (window.scrollY > document.documentElement.clientHeight) {
         hamburgerMenu.classList.add("active");
       }
     });
+
     // Hamburger Menu Toggle Open & Close
     hamburgerMenu.addEventListener('click', function (e) {
         navBar.classList.toggle("active-mobile")
     });
+
     // Menu Button Actions
+    // subMenuSearch.addEventListener("click", (e) => {
+
+    // });
+
     menuBtns.forEach(menuBtn => {
       menuBtn.addEventListener("click", (e) => {
         subMenuBtns.forEach(subMenuBtn => {
+          
+          // REMOVE IF NOT FIXED DOWN TO COMMENT
           if (navBar.classList.contains("active-mobile")) {
             // subMenusClicks.forEach(subMenuClick => {
             //   subMenuClick.addEventListener("click", (e) => {
@@ -42,11 +51,15 @@ function checkScreenWidth(maxWidth) {
             //   navBar.classList.remove("active-mobile");
             // });
           }
+          // REMOVE ABOVE IF NOT FIXED _________
           subMenuBtn.classList.remove("active");
+          
         });
+
         let nextSibling = e.target.nextElementSibling;
         nextSibling.classList.add("active");
-      })
+      });
+
     });
 
     // // Alternativ för MOBIL

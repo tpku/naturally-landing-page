@@ -509,11 +509,14 @@ h2.smaller::before {
     grid-template-columns: repeat(1, 1fr);
 }
 
-.card {
+.card{
     height: 90vh;
-    /* max-width: 700px; */
-    background-color: var(--bone);
     filter: drop-shadow(2px 2px 17px rgba(0, 0, 0, 0.55));    
+}
+
+fieldset:has(.card)  {
+    display: flex;
+    align-items: center;
 }
 
 .card img {
@@ -560,6 +563,29 @@ h2.smaller::before {
     display: none;
 }
 
+.card .card_info {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+
+    border: 2px solid var(--bone);
+    padding: 21px;
+    margin-inline: 24px;
+    margin-bottom: 32px;
+}
+
+.card .card_info legend {
+    color: var(--bone);
+}
+
+.card .card_info h3 {
+    font-size: 16px;
+}
+.card .card_info p {
+    line-height: 30px;
+    letter-spacing: 0.22em;
+}
+
 /* ---- Media Query ---- */
 
 @media screen and (min-width: 700px){
@@ -569,9 +595,7 @@ h2.smaller::before {
     .product-container {
         max-width: 750px;
         padding: 2rem 0;
-        grid-template-columns: repeat(1, 1fr);
         row-gap: 4rem;
-        /* grid-template-rows: repeat(6, 1fr); */
     }
 }
 @media screen and (min-width: 1150px){
@@ -724,11 +748,12 @@ footer .footer-container img {
 }
 
 .btn {
-    background-color: var(--black);
-    color: var(--white);
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1.25em;
+    color: var(--white);
+    background-color: var(--black);
     font-size: 1rem;
     padding: 1.5em 2em;
     border: none;

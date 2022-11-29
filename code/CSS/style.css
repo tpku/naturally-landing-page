@@ -578,19 +578,42 @@ h2.smaller::before {
 
 .product-container {
     display: grid;
-    row-gap: 5rem;
+    /* row-gap: 5rem; */
     column-gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+    ;
 }
 
 .card{
+    position: relative;
     height: 90vh;
-    filter: drop-shadow(2px 2px 17px rgba(0, 0, 0, 0.55));    
 }
 
-fieldset:has(.card)  {
-    display: flex;
-    align-items: center;
+
+.card:nth-child(1) {
+    grid-area: card1;
+}
+.card:nth-child(2) {
+    grid-area: card2;
+}
+.card:nth-child(3) {
+    grid-area: card3;
+}
+.card:nth-child(4) {
+    grid-area: card4;
+}
+.card:nth-child(5) {
+    grid-area: card5;
+}
+.card:nth-child(6) {
+    grid-area: card6;
 }
 
 .card img {
@@ -599,6 +622,7 @@ fieldset:has(.card)  {
     height: 100%;
     object-fit: cover;
     position: absolute;
+    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.55);
     filter: brightness(100%);
     transition: filter .6s ease-out; 
 }
@@ -638,24 +662,62 @@ fieldset:has(.card)  {
 }
 
 .card .card_info {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 29px;
 
     border: 2px solid var(--bone);
+    border-top: none;
+    border-left: none;
     padding: 21px;
     margin-inline: 24px;
     margin-bottom: 32px;
 }
 
-.card .card_info legend {
+.card.right .card_info {
+    border: 2px solid var(--bone);
+    border-top: none;
+    border-right: none;
+}
+
+.card .card_info::after {
+    position: absolute;
+    left: 0%;
+    bottom: 21px;
+    content: '';
+    width: 2px;
+    height: 60%;
+    background-color: var(--bone);
+}
+.card.right .card_info::after {
+    position: absolute;
+    left: 100%;
+    bottom: 21px;
+}
+
+.card .card_info span {
+    position: absolute;
+    bottom: -4px;
+    left: calc(0% + -4px);
+    background-color: var(--white);
     color: var(--bone);
+}
+.card.right .card_info span {
+    left: unset;
+    right: 0px;
 }
 
 .card .card_info h3 {
-    font-size: 16px;
+    align-self: start;
+}
+.card.right  .card_info h3 {
+    align-self: end;
 }
 .card .card_info p {
+    position: absolute;
+    top: 185px;
+    left: 0;
     line-height: 30px;
     letter-spacing: 0.22em;
 }
@@ -671,6 +733,10 @@ fieldset:has(.card)  {
         padding: 2rem 0;
         row-gap: 4rem;
     }
+
+    .card .card_info p {
+        position: unset;
+    }
 }
 @media screen and (min-width: 1150px){
     .products-section {
@@ -682,6 +748,12 @@ fieldset:has(.card)  {
         /* ____ TOMMI. Tycker nog vi ska ha lite row-gap ____ */
         /* -------------------------------------------------- */
         row-gap: 0rem;
+
+        grid-template-areas: 
+        "card1 card2"
+        "card4 card3"
+        "card5 card6"
+    ;
     }
 
     .none {

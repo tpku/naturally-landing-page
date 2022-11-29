@@ -50,7 +50,7 @@ main>img {
 
 /* ---- Form ---- */
 input {
-    font-family: 'Baskervville', serif;
+    font-family: 'Libre Baskerville', serif;
     color: var(--sand);
     background-color: var(--black);
     padding: 1em 1.5em;
@@ -329,6 +329,8 @@ section {
         gap: 0;
     }
 }
+
+
 
 /* ---- Hero Section || Start Frame ---- */
 

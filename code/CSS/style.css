@@ -278,7 +278,7 @@ section {
     }
 
     .nav-content {
-        padding: 5rem 3rem 1.5rem 0;
+        padding: 5rem 3rem 1.5rem 3rem;
         display: flex;
         justify-content: flex-end;
         right: 0;
@@ -286,6 +286,7 @@ section {
         position: absolute;
         visibility: hidden;
         overflow: hidden;
+        width: 100%;
     }
 
     .nav-content ul {
@@ -582,7 +583,8 @@ h2.smaller::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    /* ---- FELSÖK ---- */
     margin-bottom: 5rem;
 }
 
@@ -649,6 +651,7 @@ h2.smaller::before {
     opacity: 0;
     display: none;
 }
+
 .card:hover .product-info, .card.active .product-info  {
     padding: 0.65rem;
     display: flex;
@@ -696,7 +699,7 @@ h2.smaller::before {
     border: 2px solid var(--bone);
     border-top: none;
     border-left: none;
-    padding: 21px;
+    padding: 21px 21px 48px 21px;
     margin-inline: 24px;
     margin-bottom: 32px;
 }
@@ -744,7 +747,7 @@ h2.smaller::before {
 }
 .card_transperent .card_info p {
     position: absolute;
-    top: 185px;
+    top: 215px;
     left: 0;
     line-height: 1.5;
     letter-spacing: 0.22em;
@@ -752,9 +755,20 @@ h2.smaller::before {
 
 /* ---- Media Query ---- */
 
+@media screen and (min-width: 550px){
+    .card {
+        height: 90vh;
+    }
+
+    .card_transperent {
+        height: 45vh;
+    }
+}
+
 @media screen and (min-width: 700px){
     .products-section {
         padding: 0 3rem;
+        align-items: center;
     }
     .product-container {
         max-width: 750px;
@@ -777,10 +791,7 @@ h2.smaller::before {
     .product-container { 
         max-width: 1450px;
         grid-template-columns: repeat(2, 1fr);
-        /* ____ TOMMI. Tycker nog vi ska ha lite row-gap ____ */
-        /* -------------------------------------------------- */
-        row-gap: 1.5rem;
-
+        row-gap: 0;
         grid-template-areas: 
         "card1 card2"
         "card4 card3"
@@ -788,7 +799,7 @@ h2.smaller::before {
     ;
     }
 
-    .card{
+    .card {
         position: relative;
         height: 90vh;
     }
@@ -829,6 +840,7 @@ h2.smaller::before {
     .card_transperent .card_info h3, .card_transperent.right .card_info h3 {
         align-self: center;
     }
+
     .card_transperent .card_info p, .card_transperent.right .card_info p {
         text-align: center;
         align-self: center;

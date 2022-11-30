@@ -631,16 +631,15 @@ h2.smaller::before {
     transition: filter .6s ease-out; 
 }
 
-.card:hover img {
+.card:hover img, .card.active img {
     filter: brightness(55%);
 }
 
 .card .product-info {
     opacity: 0;
-    /* display: flex; */
+    display: none;
 }
-
-.card:hover .product-info {
+.card:hover .product-info, .card.active .product-info  {
     padding: 0.65rem;
     display: flex;
     flex-direction: column;
@@ -649,6 +648,19 @@ h2.smaller::before {
     opacity: 1;
     transition: opacity .6s linear;
 }
+
+.hedder-continer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.hedder-continer i {
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+  }
 
 .product-info .text-container .product-title {
     margin-bottom: 2rem;
@@ -691,7 +703,7 @@ h2.smaller::before {
     bottom: 21px;
     content: '';
     width: 2px;
-    height: 60%;
+    height: 50%;
     background-color: var(--bone);
 }
 .card_transperent.right .card_info::after {
@@ -757,7 +769,7 @@ h2.smaller::before {
         grid-template-columns: repeat(2, 1fr);
         /* ____ TOMMI. Tycker nog vi ska ha lite row-gap ____ */
         /* -------------------------------------------------- */
-        row-gap: 0rem;
+        row-gap: 1.5rem;
 
         grid-template-areas: 
         "card1 card2"
@@ -770,6 +782,10 @@ h2.smaller::before {
         position: relative;
         height: 90vh;
     }
+
+    .hedder-continer i {
+        display: none;
+    }
     
     .card_transperent {
         height: 90vh;
@@ -780,13 +796,19 @@ h2.smaller::before {
         justify-content: space-evenly;
         align-items: center;
         height: 100%;
+        border: none;
         margin-inline: 0px;
     }
 
-    .card_transperent .card_info:first-child {
+    .card_transperent.first-child  .card_info {
+        border-top: 2px solid var(--bone);
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    .card_transperent:last-child .card_info {
         border-left: none;
         border-right: none;
-        border-top: 2px solid var(--bone);
     }
 
     .card_transperent .card_info:after, .card_transperent.right .card_info::after {
@@ -806,12 +828,17 @@ h2.smaller::before {
         display: none;
     }
     
-    .card_transperent:first-child .card_info span {
+    .card_transperent.first-child .card_info span {
         display: inline-block;
         left: 0px;
         right: unset;
         bottom: unset;
         top: -9px;
+    }
+    .card_transperent:last-child .card_info span {
+        display: inline-block;
+        right: 20px;
+        bottom: -4px;
     }
 
     .none {

@@ -12,10 +12,13 @@ const leftTopContainer = document.querySelector(".hero-img-left");
 const heroRightBottom = document.querySelector(".hero-img-right img");
 const heroLeftTop = document.querySelector(".hero-img-left img");
 const heroWrapper = document.querySelector(".heading-wrapper");
-
+// window.addEventListener("scroll", function (ev) {
+//   console.log(ev.scrollY = "px");
+// })
 
 function checkScreenWidth(maxWidth) {
   if (maxWidth.matches) {
+    navBar.classList.remove("active-desktop");
 
     // Mobile Scroll max-width 650px
     window.addEventListener('scroll', function (e) {
@@ -26,7 +29,7 @@ function checkScreenWidth(maxWidth) {
 
     // Hamburger Menu Toggle Open & Close
     hamburgerMenu.addEventListener('click', function (e) {
-        navBar.classList.toggle("active-mobile")
+        navBar.classList.toggle("active-mobile");
     });
 
     // Menu Button Actions
@@ -73,9 +76,11 @@ function checkScreenWidth(maxWidth) {
   } 
   else 
   {
+    hamburgerMenu.classList.remove("active");
+    navBar.classList.remove("active-mobile");
     // Desktop Scroll & Hover
     window.addEventListener('scroll', function (e) {
-      if (window.scrollY > document.documentElement.clientHeight) {
+      if (window.scrollY > document.documentElement.clientHeight - 150) {
         navBar.classList.add("active-desktop")
       } else {
         navBar.classList.remove("active-desktop")
@@ -98,11 +103,14 @@ function checkScreenWidth(maxWidth) {
       heroRightBottom.style.transform = `scale(${1 + window.scrollY * 0.001})`;
       leftTopContainer.style.transform = `translateX(${1 + window.scrollY * -1 + "px"})`;
       heroLeftTop.style.transform = `scale(${1 + window.scrollY * 0.001})`;
+      // if (window.scrollY < 200) {
+      //   heroWrapper.style.transform = `translateY(${-62 + window.scrollY * 1 + "px"})`;
+      // }
     }) 
   }
 }
 
-const maxWidth = window.matchMedia("(max-width: 650px)")
+const maxWidth = window.matchMedia("(max-width: 750px)")
 checkScreenWidth(maxWidth) // Call listener function at run time
 maxWidth.addListener(checkScreenWidth) // Attach listener function on state changes
 

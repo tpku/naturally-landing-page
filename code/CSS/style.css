@@ -704,6 +704,7 @@ h2.smaller::before {
     position: absolute;
     bottom: -4px;
     left: calc(0% + -4px);
+    text-transform: uppercase;
     background-color: var(--white);
     color: var(--bone);
 }
@@ -713,6 +714,7 @@ h2.smaller::before {
 }
 
 .card_transperent .card_info h3 {
+    text-transform: uppercase;
     align-self: start;
 }
 .card_transperent.right  .card_info h3 {
@@ -763,14 +765,53 @@ h2.smaller::before {
         "card5 card6"
     ;
     }
+
+    .card{
+        position: relative;
+        height: 90vh;
+    }
+    
     .card_transperent {
-        height: 100%;
+        height: 90vh;
     }
     .card_transperent .card_info {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        align-items: center;
         height: 100%;
+        margin-inline: 0px;
+    }
+
+    .card_transperent .card_info:first-child {
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid var(--bone);
+    }
+
+    .card_transperent .card_info:after, .card_transperent.right .card_info::after {
+        bottom: 0px;
+        height: calc(100% + 1px);
+    }
+
+    .card_transperent .card_info h3, .card_transperent.right .card_info h3 {
+        align-self: center;
+    }
+    .card_transperent .card_info p, .card_transperent.right .card_info p {
+        text-align: center;
+        align-self: center;
+    }
+
+    .card_transperent .card_info span {
+        display: none;
+    }
+    
+    .card_transperent:first-child .card_info span {
+        display: inline-block;
+        left: 0px;
+        right: unset;
+        bottom: unset;
+        top: -9px;
     }
 
     .none {

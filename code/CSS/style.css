@@ -593,7 +593,11 @@ h2.smaller::before {
 
 .card{
     position: relative;
-    height: 90vh;
+    height: 70vh;
+}
+
+.card_transperent {
+    height: 45vh;
 }
 
 /* Select all cards and add grid aria name 1 to 6 */
@@ -637,11 +641,11 @@ h2.smaller::before {
 }
 
 .card:hover .product-info {
-    padding: 2.5rem;
+    padding: 0.65rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 90vh;
+    height: 100%;
     opacity: 1;
     transition: opacity .6s linear;
 }
@@ -661,7 +665,7 @@ h2.smaller::before {
     display: none;
 }
 
-.card .card_info {
+.card_transperent .card_info {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -675,7 +679,7 @@ h2.smaller::before {
     margin-bottom: 32px;
 }
 
-.card.right .card_info {
+.card_transperent.right .card_info {
     border: 2px solid var(--bone);
     border-top: none;
     border-right: none;
@@ -690,31 +694,31 @@ h2.smaller::before {
     height: 60%;
     background-color: var(--bone);
 }
-.card.right .card_info::after {
+.card_transperent.right .card_info::after {
     position: absolute;
     left: 100%;
     bottom: 21px;
 }
 
-.card .card_info span {
+.card_transperent .card_info span {
     position: absolute;
     bottom: -4px;
     left: calc(0% + -4px);
     background-color: var(--white);
     color: var(--bone);
 }
-.card.right .card_info span {
+.card_transperent.right .card_info span {
     left: unset;
     right: 0px;
 }
 
-.card .card_info h3 {
+.card_transperent .card_info h3 {
     align-self: start;
 }
-.card.right  .card_info h3 {
+.card_transperent.right  .card_info h3 {
     align-self: end;
 }
-.card .card_info p {
+.card_transperent .card_info p {
     position: absolute;
     top: 185px;
     left: 0;
@@ -734,7 +738,11 @@ h2.smaller::before {
         row-gap: 4rem;
     }
 
-    .card .card_info p {
+    .card:hover .product-info {
+        padding: 1.4rem;
+    }
+
+    .card_transperent .card_info p {
         position: unset;
     }
 }
@@ -754,6 +762,15 @@ h2.smaller::before {
         "card4 card3"
         "card5 card6"
     ;
+    }
+    .card_transperent {
+        height: 100%;
+    }
+    .card_transperent .card_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
     }
 
     .none {
@@ -906,4 +923,3 @@ footer .footer-container img {
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.32);
 }
-

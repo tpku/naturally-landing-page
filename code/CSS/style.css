@@ -579,7 +579,7 @@ h2.smaller::before {
 .product-container {
     display: grid;
     /* row-gap: 5rem; */
-    column-gap: 2rem;
+    column-gap: 1.5rem;
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: 
         "card1"
@@ -596,7 +596,7 @@ h2.smaller::before {
     height: 90vh;
 }
 
-
+/* Select all cards and add grid aria name 1 to 6 */
 .card:nth-child(1) {
     grid-area: card1;
 }
@@ -718,7 +718,7 @@ h2.smaller::before {
     position: absolute;
     top: 185px;
     left: 0;
-    line-height: 30px;
+    line-height: 1.5;
     letter-spacing: 0.22em;
 }
 

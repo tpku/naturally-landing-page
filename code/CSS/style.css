@@ -579,7 +579,7 @@ h2.smaller::before {
 .product-container {
     display: grid;
     /* row-gap: 5rem; */
-    column-gap: 2rem;
+    column-gap: 1.5rem;
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: 
         "card1"
@@ -593,10 +593,14 @@ h2.smaller::before {
 
 .card{
     position: relative;
-    height: 90vh;
+    height: 70vh;
 }
 
+.card_transperent {
+    height: 45vh;
+}
 
+/* Select all cards and add grid aria name 1 to 6 */
 .card:nth-child(1) {
     grid-area: card1;
 }
@@ -627,24 +631,36 @@ h2.smaller::before {
     transition: filter .6s ease-out; 
 }
 
-.card:hover img {
+.card:hover img, .card.active img {
     filter: brightness(55%);
 }
 
 .card .product-info {
     opacity: 0;
-    /* display: flex; */
+    display: none;
 }
-
-.card:hover .product-info {
-    padding: 2.5rem;
+.card:hover .product-info, .card.active .product-info  {
+    padding: 0.65rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 90vh;
+    height: 100%;
     opacity: 1;
     transition: opacity .6s linear;
 }
+
+.hedder-continer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.hedder-continer i {
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+  }
 
 .product-info .text-container .product-title {
     margin-bottom: 2rem;
@@ -661,7 +677,7 @@ h2.smaller::before {
     display: none;
 }
 
-.card .card_info {
+.card_transperent .card_info {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -675,7 +691,7 @@ h2.smaller::before {
     margin-bottom: 32px;
 }
 
-.card.right .card_info {
+.card_transperent.right .card_info {
     border: 2px solid var(--bone);
     border-top: none;
     border-right: none;
@@ -687,38 +703,40 @@ h2.smaller::before {
     bottom: 21px;
     content: '';
     width: 2px;
-    height: 60%;
+    height: 50%;
     background-color: var(--bone);
 }
-.card.right .card_info::after {
+.card_transperent.right .card_info::after {
     position: absolute;
     left: 100%;
     bottom: 21px;
 }
 
-.card .card_info span {
+.card_transperent .card_info span {
     position: absolute;
     bottom: -4px;
     left: calc(0% + -4px);
+    text-transform: uppercase;
     background-color: var(--white);
     color: var(--bone);
 }
-.card.right .card_info span {
+.card_transperent.right .card_info span {
     left: unset;
     right: 0px;
 }
 
-.card .card_info h3 {
+.card_transperent .card_info h3 {
+    text-transform: uppercase;
     align-self: start;
 }
-.card.right  .card_info h3 {
+.card_transperent.right  .card_info h3 {
     align-self: end;
 }
-.card .card_info p {
+.card_transperent .card_info p {
     position: absolute;
     top: 185px;
     left: 0;
-    line-height: 30px;
+    line-height: 1.5;
     letter-spacing: 0.22em;
 }
 
@@ -734,7 +752,11 @@ h2.smaller::before {
         row-gap: 4rem;
     }
 
-    .card .card_info p {
+    .card:hover .product-info {
+        padding: 1.4rem;
+    }
+
+    .card_transperent .card_info p {
         position: unset;
     }
 }
@@ -747,13 +769,76 @@ h2.smaller::before {
         grid-template-columns: repeat(2, 1fr);
         /* ____ TOMMI. Tycker nog vi ska ha lite row-gap ____ */
         /* -------------------------------------------------- */
-        row-gap: 0rem;
+        row-gap: 1.5rem;
 
         grid-template-areas: 
         "card1 card2"
         "card4 card3"
         "card5 card6"
     ;
+    }
+
+    .card{
+        position: relative;
+        height: 90vh;
+    }
+
+    .hedder-continer i {
+        display: none;
+    }
+    
+    .card_transperent {
+        height: 90vh;
+    }
+    .card_transperent .card_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        border: none;
+        margin-inline: 0px;
+    }
+
+    .card_transperent.first-child  .card_info {
+        border-top: 2px solid var(--bone);
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    .card_transperent:last-child .card_info {
+        border-left: none;
+        border-right: none;
+    }
+
+    .card_transperent .card_info:after, .card_transperent.right .card_info::after {
+        bottom: 0px;
+        height: calc(100% + 1px);
+    }
+
+    .card_transperent .card_info h3, .card_transperent.right .card_info h3 {
+        align-self: center;
+    }
+    .card_transperent .card_info p, .card_transperent.right .card_info p {
+        text-align: center;
+        align-self: center;
+    }
+
+    .card_transperent .card_info span {
+        display: none;
+    }
+    
+    .card_transperent.first-child .card_info span {
+        display: inline-block;
+        left: 0px;
+        right: unset;
+        bottom: unset;
+        top: -9px;
+    }
+    .card_transperent:last-child .card_info span {
+        display: inline-block;
+        right: 20px;
+        bottom: -4px;
     }
 
     .none {
@@ -906,4 +991,3 @@ footer .footer-container img {
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.32);
 }
-

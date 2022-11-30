@@ -13,6 +13,8 @@ const heroRightBottom = document.querySelector(".hero-img-right img");
 const heroLeftTop = document.querySelector(".hero-img-left img");
 const heroWrapper = document.querySelector(".heading-wrapper");
 
+// card
+const cards = document.querySelectorAll('.card');
 
 function checkScreenWidth(maxWidth) {
   if (maxWidth.matches) {
@@ -106,3 +108,18 @@ const maxWidth = window.matchMedia("(max-width: 650px)")
 checkScreenWidth(maxWidth) // Call listener function at run time
 maxWidth.addListener(checkScreenWidth) // Attach listener function on state changes
 
+cards.forEach( card => {
+  card.addEventListener('click', e => {
+    if (e.target == card) {
+      e.target.classList.add('active');
+    }
+  })
+  const closeBtn = card.querySelector('i')
+  if (closeBtn) {
+    console.log(closeBtn);
+    closeBtn.addEventListener('click', e => {
+      console.log(e.target.offsetParent);
+      e.target.offsetParent.classList.remove('active')
+    })
+  }
+})

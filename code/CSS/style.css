@@ -8,6 +8,7 @@ html, body {
     padding: 0;
     height: 100vh;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 main {
@@ -122,7 +123,7 @@ header {
 
 .logo {
     position: absolute;
-    top: 36px;
+    top: 37px;
 }
 
 .hamburger {
@@ -233,12 +234,12 @@ section {
 
 /* ---- Media Query ---- */
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 750px) {
     header {
         width: 100%;
     }
     .nav-bar {
-        padding: 1.5rem 3rem 0 3rem;
+        padding: 1rem 3rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -250,18 +251,22 @@ section {
 
     .logo {
         position: inherit;
-        top: 4px;
-    }
-
-    .nav-bar .menu-btns {
-        margin: 0;
-        text-align: right;
+        top: 6px;
+        margin-right: 1rem;
     }
 
     .menu-btns, .logo {
         visibility: visible;
         overflow: visible;
-        /* display: flex; */
+    }
+
+    .nav-bar .menu-btns {
+        margin: 0;
+        text-align: right;
+
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
     }
 
     .hamburger {
@@ -270,7 +275,6 @@ section {
 
     ul {
         display: flex;
-        gap: 4rem;
     }
 
     .nav-content {
@@ -322,6 +326,12 @@ section {
 
     ul {
         gap: 6rem;
+    }
+
+    .nav-bar .menu-btns {
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
     }
 
     .nav-content ul{
@@ -408,7 +418,7 @@ h2.smaller::before {
 
 /* ---- Media Query ---- */
 
-@media screen and (min-width: 650px){
+@media screen and (min-width: 750px){
     .hero-section {
         flex-direction: row;
     }
@@ -862,15 +872,9 @@ h2.smaller::before {
 .trash-section .text-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 24px 20px;
+    gap: 24px 200px;
     padding-inline: 24px;
     padding-bottom: 116px;
-}
-
-.trash .text-container .column {
-	display: flex;
-	gap: 24px;
-	flex-direction: column;
 }
 
 .trash-section .text-container h2 {
@@ -909,6 +913,7 @@ h2.smaller::before {
     .trash-section .text-container .column  p {
         line-height: 1.45;
         font-size: 1.5rem;
+        letter-spacing: 1px;
     }
     .trash-section .text-container .column  p:last-child {
         grid-column: 2 / -1;
@@ -967,7 +972,6 @@ footer .footer-container img {
         height: 28px;
     }
 }
-
 
 /* ---- Buttons ---- */
 

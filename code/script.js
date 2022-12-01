@@ -72,7 +72,7 @@ function checkScreenWidth(maxWidth) {
     // ____ TEST FÖR PARALLAX ____
     document.addEventListener("scroll", (e) => {
       leftTopContainer.style.transform = `translateY(${1 + window.scrollY * -1 + "px"})`;
-      rightBottomContainer.style.transform = `translateY(${1 + window.scrollY * 3 + "px"})`;
+      rightBottomContainer.style.transform = `translateY(${1 + window.scrollY * 1 + "px"})`;
       heroLeftTop.style.transform = `scale(${1 + window.scrollY * 0.005})`;
       heroRightBottom.style.transform = `scale(${1 + window.scrollY * 0.005})`;
     });
@@ -125,9 +125,7 @@ cards.forEach( card => {
   })
   const closeBtn = card.querySelector('i')
   if (closeBtn) {
-    console.log(closeBtn);
     closeBtn.addEventListener('click', e => {
-      console.log(e.target.offsetParent);
       e.target.offsetParent.classList.remove('active')
     })
   }

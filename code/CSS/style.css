@@ -704,14 +704,17 @@ h2.smaller::before {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 29px;
-
+    /* FELSÖK */
+    gap: 32px;
     border: 2px solid var(--bone);
     border-top: none;
     border-left: none;
-    padding: 21px 21px 48px 21px;
+    /* FELSÖK */
+    padding: 32px 22px 30px 22px;
     margin-inline: 24px;
     margin-bottom: 32px;
+    /* FELSÖK Margin between card img / transparent*/
+    margin-top: 8px;
 }
 
 .card_transperent.right .card_info {
@@ -936,8 +939,10 @@ h2.smaller::before {
     }
 
     .bottom-title {
+        grid-column: 1/-1;
         font-size: 1.5rem;
         margin-top: 40px;
+        font-size: 2.5rem;
     }
 }
 @media screen and (min-width: 1100px) {
@@ -961,6 +966,7 @@ h2.smaller::before {
     /* FELSÖK */
 
     .bottom-title {
+        margin-top: 80px;
         font-size: 4rem;
     }
 }

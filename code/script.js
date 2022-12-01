@@ -71,10 +71,10 @@ function checkScreenWidth(maxWidth) {
     // // Alternativ för MOBIL
     // ____ TEST FÖR PARALLAX ____
     document.addEventListener("scroll", (e) => {
-      leftTopContainer.style.transform = `translateY(${1 + window.scrollY * -1 + "px"})`;
-      rightBottomContainer.style.transform = `translateY(${1 + window.scrollY * 1 + "px"})`;
+      leftTopContainer.style.transform = `translateY(${1 + window.scrollY * -0.5 + "px"})`;
+      rightBottomContainer.style.transform = `translateY(${1 + window.scrollY * 1.5 + "px"})`;
       heroLeftTop.style.transform = `scale(${1 + window.scrollY * 0.005})`;
-      heroRightBottom.style.transform = `scale(${1 + window.scrollY * 0.005})`;
+      heroRightBottom.style.transform = `scale(${1 + window.scrollY * 0.005}), 200`;
     });
   } 
   else 
@@ -117,6 +117,8 @@ const maxWidth = window.matchMedia("(max-width: 750px)")
 checkScreenWidth(maxWidth) // Call listener function at run time
 maxWidth.addListener(checkScreenWidth) // Attach listener function on state changes
 
+
+
 cards.forEach( card => {
   card.addEventListener('click', e => {
     if (e.target == card) {
@@ -125,8 +127,13 @@ cards.forEach( card => {
   })
   const closeBtn = card.querySelector('i')
   if (closeBtn) {
+    console.log(closeBtn);
     closeBtn.addEventListener('click', e => {
       e.target.offsetParent.classList.remove('active')
     })
   }
 })
+
+window.onscroll = function (e) {
+  console.log(window.scrollY); // Value of scroll Y in px
+};

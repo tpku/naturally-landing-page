@@ -59,6 +59,10 @@ ul a:hover, a, h1 {
     color: var(--green);
 }
 
+/* .active-mobile h3 {
+    color: var(--green);
+} */
+
 input {
     font-size: 18px;
     color: var(--sand);
@@ -143,6 +147,17 @@ h3 {
     letter-spacing: -1px;
 }
 
+@media screen and (min-width: 550px){
+    .product-text {
+    /* <p> */
+    font-size: 24px;
+    }
+
+    .product-title {
+    /* <h2> */
+    font-size: 39px;
+    }
+}
 
 @media screen and (min-width: 800px){
     
@@ -156,7 +171,6 @@ h3 {
     h2.smaller {
         font-size: 1.58rem;
     }
-
 
     .signup-container h2 {
         font-size: 48px;
@@ -180,7 +194,7 @@ h3 {
 
 @media screen and (min-width: 1150px) {
     .nav-content li a {
-        font-size: 1px;
+        font-size: 18px;
     }
 
     h1 {
@@ -191,12 +205,40 @@ h3 {
         -webkit-transition: font-size .50s linear; 
     }
 
+    p {
+        font-size: 24px;
+    }
+
     h2.smaller {
         font-size: 2.03rem;
     }
+
+    .product-text {
+        /* <p> */
+        font-size: 24px;
+    }
+    
+    .product-title {
+        /* <h2> */
+        font-size: 39px;
+    }
+
+    .card_info h3 {
+        font-size: 24px;
+    }
+    .card_info span {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
     .trash-section .text-container h2,
     .intro-section .text-container h2 {
         font-size: 98.3px;
+    }
+
+    .trash-section .text-container .column b,
+    .intro-section .text-container .column b {
+        font-size: 21px;
     }
 
     .trash-section .text-container .column  p,
@@ -218,4 +260,8 @@ h3 {
     .bottom-title b {
         font-size: 57px;
         }
+
+    .footer-container h3 {
+        font-size: 24px;
+    }
 }

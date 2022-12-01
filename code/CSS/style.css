@@ -252,7 +252,6 @@ section {
     .nav-bar .menu-btns {
         margin: 0;
         text-align: right;
-
         width: 600px;
         display: flex;
         justify-content: space-between;

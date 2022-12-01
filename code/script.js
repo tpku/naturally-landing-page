@@ -45,7 +45,7 @@ function checkScreenWidth(maxWidth) {
         subMenuBtns.forEach(subMenuBtn => {
           
           // REMOVE IF NOT FIXED DOWN TO COMMENT
-          if (navBar.classList.contains("active-mobile")) {
+          // if (navBar.classList.contains("active-mobile")) {
             // subMenusClicks.forEach(subMenuClick => {
             //   subMenuClick.addEventListener("click", (e) => {
             //     navBar.classList.remove("active-mobile");
@@ -56,7 +56,7 @@ function checkScreenWidth(maxWidth) {
             // subMenuClick.addEventListener("click", (e) => {
             //   navBar.classList.remove("active-mobile");
             // });
-          }
+          // }
           // REMOVE ABOVE IF NOT FIXED _________
           subMenuBtn.classList.remove("active");
           
@@ -65,6 +65,8 @@ function checkScreenWidth(maxWidth) {
         let nextSibling = e.target.nextElementSibling;
         nextSibling.classList.add("active");
       });
+
+      
 
     });
 
@@ -96,6 +98,7 @@ function checkScreenWidth(maxWidth) {
           subMenuBtn.classList.remove("active");
         });
         let nextSibling = e.target.nextElementSibling;
+        // let nextSibling = e.target.previousElementSibling;
         nextSibling.classList.add("active");
       })
     });

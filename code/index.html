@@ -151,7 +151,15 @@
     <main>
 
         <!-- Start MAIN  -->
-        <img src="./IMG/naturally-bg.png" alt="">
+        <img
+        src="./IMG/naturally-bg-500w.png"
+        alt="Naturally logo repeating as a pattern"
+        srcset="
+        ./IMG/naturally-bg-500w.png   500w,
+        ./IMG/naturally-bg-820w.png   820w,
+        ./IMG/naturally-bg-1440w.png 1440w"
+        sizes="(max-width: 600px) 250px, 410px, 720px"
+        >
 
         <!-- Hero Section -->
         <section class="hero-section">
@@ -160,23 +168,40 @@
                 <h2 class="smaller" text-overlay="UNATURALLY NATURAL">UNATURALLY NATURAL</h2>
             </div>
             <div class="hero-img-left">
-                <picture>
-                    <source media="(min-width:800px)" srcset="IMG/Klänning/Klänning_SvartBG_1920x1280.png">
-                    <img src="IMG/Klänning/Klänning_SvartBG_1000x1326.png" alt="">
-                </picture>
+                <img
+                src="./IMG/skirt-blkbg-lg-1000w.png"
+                alt="3d rendered skirt in black and knitted top in white on dark gray background, displaying front and back"
+                srcset="
+                ./IMG/skirt-blkbg-lg-500w.png   500w,
+                ./IMG/skirt-blkbg-lg-750w.png  750w,
+                ./IMG/skirt-blkbg-lg-1000w.png 1000w"
+                sizes="(max-width: 600px) 250px, 375px, 500px"
+                >
             </div>
             <div class="hero-img-right">
-                <picture>
-                    <source media="(min-width:800px)" srcset="IMG/Klänning/Klänning_VitBG_1920x1280.png">
-                    <img src="IMG/Klänning/Klänning_VitBG_1000x1326.png" alt="">
-                </picture>
-                <img src="IMG/tin-md.jpg" alt="">
+                <img
+                src="./IMG/dress-whitebg-sm-574w.png"
+                alt="3d rendered dress with tie on torso on white gray background, displaying front and back"
+                srcset="
+                ./IMG/dress-whitebg-sm-574w.png   574w,
+                ./IMG/dress-whitebg-md-1148w.png  1148w,
+                ./IMG/dress-whitebg-lg-1470w.png 1470w"
+                sizes="(max-width: 600px) 287px, 574px, 735px"
+                >
             </div>
         </section>
 
         <!-- Top Intro Info Section -->
         <section class="intro-section" id="intro">
-            <img src="IMG/sopor.png" alt="">
+            <img
+            src="./IMG/collection-900w.png"
+            alt="Landscape photo of an escalator in the background with 3 3d figures wearing naturally clothing"
+            srcset="
+            ./IMG/collection-900w.png   900w,
+            ./IMG/collection-1500w.png   1500w,
+            ./IMG/collection-1920w.png 1920w"
+            sizes="(max-width: 600px) 450px, 750px, 960px"
+            >
 
             <div class="text-container" id="intro">
                 <h2>Kastrup - vår <br> nylanserade kollektion</h2>
@@ -184,12 +209,8 @@
                     <p><b>Vår nya kollektion</b> som är helt återvunnen från gamla flygplansdelar och satelliter ger dig ett unikt  men ändå elegant uttryck. Tänk om vi kunde återanvända dessa sopor? Vår kollektion är inte bara miljövänlig och vacker, utan också den mest bekväma i vardagen. </p>
                     <p>Hitta din nya go-to stil med vår kollektion av hållbara och modemedvetna produkter. Vi uppmärksammar varje detalj i varje produkt samtidigt som vi har deras inverkan på miljön i åtanke, så att du kan känna dig nöjd med att ge tillbaka till Moder Natur.</p>
                 </div>
-                <div class="column">
-                    <picture>
-                        <source media="(min-width:465px)" srcset="IMG/Ring/ring_1920x1280.gif">
-                        <img src="IMG/Ring/Ring_1000x11326.gif" alt="">
-                    </picture>
-                    <!-- <img src="IMG/Studio_Naturally_Ring_Svart.png" alt=""> -->
+                <div class="column image">
+                        <img src="IMG/ring.gif" alt="3d rendered ring in spinning animation">
                 </div>
             </div>
         </section>
@@ -213,10 +234,15 @@
 
                 <!-- First Product card -->
                 <article class="card">
-                    <picture>
-                        <source media="(min-width:800px)" srcset="IMG/Klänning/Klänning_VitBG_1920x1280.png">
-                        <img src="IMG/Klänning/Klänning_VitBG_1000x1326.png" alt="">
-                    </picture>
+                    <img
+                    src="./IMG/dress-whitebg-sm-574w.png"
+                    alt="3d rendered dress with tie on torso on white gray background, displaying front and back"
+                    srcset="
+                    ./IMG/dress-whitebg-sm-574w.png   574w,
+                    ./IMG/dress-whitebg-md-1148w.png  1148w,
+                    ./IMG/dress-whitebg-lg-1470w.png 1470w"
+                    sizes="(max-width: 600px) 287px, 574px, 735px"
+                    >
                     <div class="product-info">
                         <div class="text-container">
                             <div class="hedder-continer">
@@ -243,7 +269,10 @@
                 
                 <!-- Second Product card -->
                 <article class="card">
-                    <img src="./IMG/Jacka GIF/GIF JACKA 1000x1326.gif" alt="">
+                    <img
+                    src="./IMG/jacket-1000w.gif"
+                    alt="Puffy down jacket, animated gif spinning"
+                    >
                     <div class="product-info">
                         <div class="text-container product-hover">
                             <div class="hedder-continer">
@@ -270,10 +299,10 @@
 
                 <!-- Third Product card -->
                 <article class="card">
-                    <picture>
-                        <source media="(min-width:800px)" srcset="IMG/SIM_svart_bättrekvalite_naturally0052-0122_1.gif">
-                        <img src="IMG/SIM_svart_bättrekvalite_naturally0052-0122.gif" alt="">
-                    </picture>
+                    <img
+                    src="./IMG/skirt-whitebg.gif"
+                    alt="Puffy down jacket, animated gif spinning"
+                    >
                     <div class="product-info">
                         <div class="text-container product-hover">
                             <div class="hedder-continer">
@@ -302,8 +331,9 @@
 
         <!-- Trash Section -->
         <section class="trash-section" id="trash">
-            <img src="IMG/sopor.png" alt="">
-
+            <div class="image-box">
+                <img src="IMG/package.jpg" alt="A picture of a package box half open lid with the naturally logo on top of the lid">
+            </div>
             <div class="text-container">
                 <h2>Sopor <br> en ändlig källa?</h2>
                 <div class="column">

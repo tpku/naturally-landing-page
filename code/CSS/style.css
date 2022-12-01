@@ -51,12 +51,10 @@ main>img {
 
 /* ---- Form ---- */
 input {
-    color: var(--sand);
     background-color: var(--black);
     padding: 1em 1.5em;
     border: none;
     width: 100%;
-    font-size: 1.125rem;
 }
 
 
@@ -65,12 +63,7 @@ input:focus-visible {
     border-radius: .1em;
 }
 
-@media screen and (min-width: 800px) {
-    input {
-        font-size: 1.5rem;
-    }
-}
-
+/* ---- HEADER ---- */
 header {
     width: 100%;
     z-index: 10;
@@ -186,19 +179,16 @@ ul {
 .active-mobile .nav-content.contact.active, 
 .active-mobile .nav-content.store.active, 
 .active-mobile .nav-content.search.active  {
-        visibility: visible;
-        overflow: visible;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 1rem 0;
-        width: 100%;
-        gap: 0.5rem;
+    visibility: visible;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem 0;
+    width: 100%;
+    gap: 0.5rem;
     }
 
-/* .active-mobile a.home + .nav-content.home.active {
-    color: var(--black);
-} */
 
 .active-mobile .nav-content.store.active a,
 .active-mobile .nav-content.store.active hr,
@@ -318,7 +308,7 @@ section {
     .nav-bar.active-desktop:hover {
         background-color: var(--white);
         filter: drop-shadow(2px 2px 17px rgba(0, 0, 0, 0.05));
-        height: 320px;
+        height: 340px;
     }
 }
 
@@ -505,15 +495,6 @@ h2.smaller::before {
     margin: 0 5rem;
 }
 
-.signup-container h2 {
-    font-size: 2rem;
-    letter-spacing: 1px;
-}
-
-.signup-container > p {
-    font-size: 1.125rem;
-    color: var(--sand);
-}
 
 .signup-container .signup-form {
     display: grid;
@@ -523,7 +504,7 @@ h2.smaller::before {
 }
 .signup-container .signup-form label {
     grid-column: 1/-1;
-    font-size: 13px;
+    font-size: 12px;
 }
 .signup-container .signup-form button {
     justify-self: center;
@@ -541,10 +522,6 @@ h2.smaller::before {
         padding: 1.5rem 2rem;
     }
 
-    .signup-container h2 {
-        font-size: 48px;
-        letter-spacing: 2px;
-    }
     .signup-container p {
         font-size: 24px;
     }
@@ -572,10 +549,6 @@ h2.smaller::before {
         padding: 60px 0.65rem;
     }
 
-    .signup-container h2 {
-        font-size: 102px;
-        letter-spacing: 5px;
-    }
     .signup-container p {
         font-size: 39px;
     }
@@ -663,7 +636,7 @@ h2.smaller::before {
 }
 
 .card:hover .product-info, .card.active .product-info  {
-    padding: 0.65rem;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -763,7 +736,6 @@ h2.smaller::before {
     top: 215px;
     left: 0;
     line-height: 1.5;
-    letter-spacing: 0.22em;
 }
 
 /* ---- Media Query ---- */
@@ -908,7 +880,6 @@ h2.smaller::before {
 
 .trash-section .text-container h2 {
     grid-column: 1 / -1;
-    font-size: 2rem;
 }
 
 .trash-section .text-container .column {
@@ -917,17 +888,14 @@ h2.smaller::before {
     gap: 1.5rem;
 }
 
-
 .trash-section .text-container .colum  p {
     line-height: 1.3;
 }
 
 .bottom-title {
-    font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
     margin-top: 40px;
-    letter-spacing: -1px;
 }
 
 /* ---- Media Query ---- */
@@ -940,9 +908,7 @@ h2.smaller::before {
 
     .bottom-title {
         grid-column: 1/-1;
-        font-size: 1.5rem;
         margin-top: 40px;
-        font-size: 2.5rem;
     }
 }
 @media screen and (min-width: 1100px) {
@@ -967,7 +933,6 @@ h2.smaller::before {
 
     .bottom-title {
         margin-top: 80px;
-        font-size: 4rem;
     }
 }
 
@@ -1019,9 +984,6 @@ footer .footer-container img {
 @media screen and (min-width: 700px) {
     footer .footer-container .social {
         margin-block: 36 px;
-    }
-
-    footer .footer-container img {
     }
 }
 

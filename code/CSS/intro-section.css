@@ -24,7 +24,6 @@
 
 .intro-section .text-container h2 {
     grid-column: 1 / -1;
-    font-size: 2rem;
     padding: 24px 0;
 }
 
@@ -70,7 +69,6 @@
     }
     .intro-section .text-container h2 {
         grid-column: 1 / -1;
-        font-size: 6.375rem;
     }
     .intro-section .text-container .column  p {
         line-height: 1.45;

@@ -1,6 +1,7 @@
 /* ---- INTRO SECTION ---- */
 
 .intro-section {
+    margin-top: 100px;
     height: auto;
     background-image: linear-gradient(var(--white), var(--trans-white));
 }
@@ -24,6 +25,7 @@
 .intro-section .text-container h2 {
     grid-column: 1 / -1;
     font-size: 2rem;
+    padding: 24px 0;
 }
 
 .intro-section .text-container .column {
@@ -46,6 +48,10 @@
     }
 }
 @media screen and (min-width: 1100px) {
+    .intro-section {
+        margin-top: 200px;
+    }
+
     .intro-section .text-container{
         grid-template-columns: repeat(2, 1fr);
         /* padding-bottom: 378px; */

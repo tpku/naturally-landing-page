@@ -30,7 +30,7 @@ h1,h2.smaller {
     font-family: 'Notable', sans-serif;
 }
 
-.btn {
+.btn, input {
     font-family: 'Baskervville', serif;
 }
 

@@ -45,7 +45,7 @@
 
 /* ---- Media Query ---- */
 @media screen and (min-width: 600px) {
-    .intro-section .text-container .colum img {
+    .intro-section .text-container .column picture {
         height: 590px;
         width: 100%;
     }

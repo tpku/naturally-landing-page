@@ -1,7 +1,15 @@
 
-/* font-family: 'Libre Baskerville', serif;
+/* 
+font-family: 'Baskervville', serif;
+font-family: 'Libre Baskerville', serif;
 font-family: 'Notable', sans-serif;
-font-family: 'Poppins', sans-serif; */
+font-family: 'Poppins', sans-serif;
+
+Baskervville = Reg 400
+Libre Baskerville = Bold 700
+Notable = Reg 400
+Poppins = Reg 400, Bold 700
+ */
 
 h1, h2, h3, p, a, ul{
     margin: 0;
@@ -11,7 +19,7 @@ h1, h2, h3, p, a, ul{
 
 html {
     color: var(--black);
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Baskervville', serif;
 }
 
 header, footer {
@@ -22,7 +30,11 @@ h1,h2.smaller {
     font-family: 'Notable', sans-serif;
 }
 
-.btn {
+.btn, input {
+    font-family: 'Baskervville', serif;
+}
+
+b {
     font-family: 'Libre Baskerville', serif;
 }
 

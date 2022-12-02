@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATURALLY</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&family=Libre+Baskerville:wght@400;700&family=Notable&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="CSS/color.css">
+    <link rel="stylesheet" href="CSS/text.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/intro-section.css">
+    <link rel="stylesheet" href="CSS/text-info-section.css">
+
+    <!-- fontAwesome icons pack -->
+    <script src="https://kit.fontawesome.com/a913f4ac89.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <!-- Navbar Section -->
+        <div class="hamburger"><img src="./IMG/burger.svg" alt="Hamburger Menu">
+        </div>
+        <nav class="nav-bar">
+                <div class="logo">
+                    <a href="#intro"><img src="IMG/logo-text.svg" alt="Naturally logo"></a>
+                </div>
+
+
+                <ul class="menu-btns">
+                    <li>
+                        <a data-btn="home" class="menu-btn home" href="#">Hem</a>
+                        <div class="nav-content home">
+                            <ul>
+                                <li><h3>Story</h3></li>
+                                <li><hr></li>
+                                <li><a href="#trash">Om oss</a></li>
+                            </ul>
+                            <ul>
+                                <li><h3>Språk</h3></li>
+                                <li><hr></li>
+                                <li><a href="">* Svenska</a></li>
+                                <li><a href="index-eng.html">English</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a data-btn="store" class="menu-btn store" href="#">Butik</a>
+                        <div class="nav-content store">
+                            <ul>
+                                <li><h3>Kollektioner</h3></li>
+                                <li><hr></li>
+                                <li><a href="">Landvetter</a></li>
+                                <li><a href="">Säve</a></li>
+                                <li><a href="">Arlanda</a></li>
+                                <li><a href="">Kastrup</a></li>
+                            </ul>
+                            <ul>
+                                <li><h3>Accessoarer</h3></li>
+                                <li><hr></li>
+                                <li><a href="">Smycken</a></li>
+                                <li><a href="">Klockor</a></li>
+                                <li><a href="">Bälten</a></li>
+                                <li><a href="">Väskor</a></li>
+                            </ul>
+                            <ul>
+                                <li><h3>Tunikor</h3></li>
+                                <li><hr></li>
+                                <li><a href="">Athen</a></li>
+                                <li><a href="">Rom</a></li>
+                            </ul>
+                            <ul>
+                                <li><h3>Klänningar</h3></li>
+                                <li><hr></li>
+                                <li><a href="">Maxi</a></li>
+                                <li><a href="">Kort</a></li>
+                                <li><a href="">Volang</a></li>
+                                <li><a href="">Verideer</a></li>
+                                <li><a href="">Linne</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a data-btn="info" class="menu-btn info" href="#">Info</a>
+                        <div class="nav-content info">
+                            <ul>
+                                <li><h3>Hållbarhet</h3></li>
+                                <li><hr></li>
+                                <li><a href="">Återvinning</a></li>
+                                <li><a href="">Bakom</a></li>
+                            </ul>
+                            <ul>
+                                <li><h3>Vår väg</h3></li>
+                                <li><hr></li>
+                                <li><a href="">Start</a></li>
+                                <li><a href="">Sammarbeten</a></li>
+                                <li><a href="">Var vi är nu</a></li>
+                                <li><a href="">Våra mål</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a data-btn="contact" class="menu-btn contact" href="#">Kontakt</a>
+                        <div class="nav-content contact">
+                            <ul>
+                                <li><h3>Besök oss på</h3></li>
+                                <li><hr></li>
+                                <li><a href="https://www.google.com/maps/place/G%C3%B6ketorpsgatan+19,+416+56+G%C3%B6teborg/@57.7100862,12.0192868,17z/data=!3m1!4b1!4m5!3m4!1s0x464ff4763de78771:0xcafb3513a7a5b8c3!8m2!3d57.7100862!4d12.0192868" target="_blank">Göketorpsgatan 19A <br>413 22 Göteborg SVERIGE</a></li>
+                            </ul>
+                            <ul>
+                                <li><h3>Kontaktinformation</h3></li>
+                                <li><hr></li>
+                                <li><a href="mailto:info@naturally.com">info@naturally.com</a></li>
+                                <li><a href="tel:010-399 234 2">010-399 234 21</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <a data-btn="search" class="menu-btn search" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="none">
+                                <path fill="#CEC7B9" fill-rule="evenodd" stroke="#CEC7B9" stroke-width="2" d="M19.753 20.399c-1.963 1.432-4.432 2.285-7.114 2.285-6.398 0-11.584-4.854-11.584-10.842S6.24 1 12.639 1c6.397 0 11.584 4.854 11.584 10.842 0 3.099-1.39 5.894-3.617 7.87l4.449 4.58-.832.708-4.47-4.601zm3.611-8.557c0 5.545-4.802 10.04-10.725 10.04-5.924 0-10.726-4.495-10.726-10.04 0-5.544 4.802-10.039 10.726-10.039 5.923 0 10.725 4.495 10.725 10.04z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <div class="nav-content search">
+                            <ul>
+                                <li><h3>Sök på hemsidan</h3></li>
+                                <li><hr></li>
+                                <li>
+                                    <form action="">
+                                        <input type="text">
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Start MAIN  -->
+        <img
+        src="./IMG/naturally-bg-500w.png"
+        alt="Naturally logo repeating as a pattern"
+        srcset="
+        ./IMG/naturally-bg-500w.png   500w,
+        ./IMG/naturally-bg-820w.png   820w,
+        ./IMG/naturally-bg-1440w.png 1440w"
+        sizes="(max-width: 600px) 250px, 410px, 720px"
+        >
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="heading-wrapper">
+                <h1 text-overlay="NATURALLY">NATURALLY</h1>
+                <h2 class="smaller" text-overlay="UNATURALLY NATURAL">UNATURALLY NATURAL</h2>
+            </div>
+            <div class="hero-img-left">
+                <img
+                src="./IMG/skirt-blkbg-lg-1000w.png"
+                alt="3d rendered skirt in black and knitted top in white on dark gray background, displaying front and back"
+                srcset="
+                ./IMG/skirt-blkbg-lg-500w.png   500w,
+                ./IMG/skirt-blkbg-lg-750w.png  750w,
+                ./IMG/skirt-blkbg-lg-1000w.png 1000w"
+                sizes="(max-width: 600px) 250px, 375px, 500px"
+                >
+            </div>
+            <div class="hero-img-right">
+                <img
+                src="./IMG/dress-whitebg-sm-574w.png"
+                alt="3d rendered dress with tie on torso on white gray background, displaying front and back"
+                srcset="
+                ./IMG/dress-whitebg-sm-574w.png   574w,
+                ./IMG/dress-whitebg-md-1148w.png  1148w,
+                ./IMG/dress-whitebg-lg-1470w.png 1470w"
+                sizes="(max-width: 600px) 287px, 574px, 735px"
+                >
+            </div>
+        </section>
+
+        <!-- Top Intro Info Section -->
+        <section class="intro-section" id="intro">
+            <img
+            src="./IMG/collection-900w.png"
+            alt="Landscape photo of an escalator in the background with 3 3d figures wearing naturally clothing"
+            srcset="
+            ./IMG/collection-900w.png   900w,
+            ./IMG/collection-1500w.png   1500w,
+            ./IMG/collection-1920w.png 1920w"
+            sizes="(max-width: 600px) 450px, 750px, 960px"
+            >
+
+            <div class="text-container" id="intro">
+                <h2>Kastrup - vår <br> nylanserade kollektion</h2>
+                <div class="column">
+                    <p><b>Vår nya kollektion</b> som är helt återvunnen från gamla flygplansdelar och satelliter ger dig ett unikt  men ändå elegant uttryck. Tänk om vi kunde återanvända dessa sopor? Vår kollektion är inte bara miljövänlig och vacker, utan också den mest bekväma i vardagen. </p>
+                    <p>Hitta din nya go-to stil med vår kollektion av hållbara och modemedvetna produkter. Vi uppmärksammar varje detalj i varje produkt samtidigt som vi har deras inverkan på miljön i åtanke, så att du kan känna dig nöjd med att ge tillbaka till Moder Natur.</p>
+                </div>
+                <div class="column image">
+                        <img src="IMG/ring.gif" alt="3d rendered ring in spinning animation">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sign up Section -->
+        <section class="signup-section">
+            <div class="signup-container">
+                <h2>Sign up</h2>
+                <p>bli vår vän samt ta del av oss och vår väg!</p>
+                <form class="signup-form" action="" method="post">
+                    <label for="">E-post</label>
+                    <input class="signup-input" name="email" type="email" placeholder="exempel@mail.com">
+                    <button class="btn signup-btn" type="submit">Prenumerera</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="product-container">
+
+                <!-- First Product card -->
+                <article class="card">
+                    <img
+                    src="./IMG/dress-whitebg-sm-574w.png"
+                    alt="3d rendered dress with tie on torso on white gray background, displaying front and back"
+                    srcset="
+                    ./IMG/dress-whitebg-sm-574w.png   574w,
+                    ./IMG/dress-whitebg-md-1148w.png  1148w,
+                    ./IMG/dress-whitebg-lg-1470w.png 1470w"
+                    sizes="(max-width: 600px) 287px, 574px, 735px"
+                    >
+                    <div class="product-info">
+                        <div class="text-container">
+                            <div class="hedder-continer">
+                                <h2 class="product-title">Landvetter</h2>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <p class="product-text">Material på plagg, vartifrån den kommer och lite kort om designen.</p>
+                        </div>
+                        <div class="btn-container-index">
+                            <button class="btn active test-btn"><span>Läs mer</span></button>
+                            <button class="btn active test-btn"><i class="fa-solid fa-plus"></i><span>Varukorgen</span></button>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card card_transperent first-child right">
+                    <div class="card_info">
+                        <h3><b>Från tippen till klänning</b></h3>
+                        <span>Från skräp till fashion</span>
+                        <p> Vårt utbud består till 100% av återvunnet material och vår grundtanke är hållbarhet. </p>
+                        <button class="btn">Alla klänningar</button>
+                    </div>
+                </article>
+                
+                <!-- Second Product card -->
+                <article class="card">
+                    <img
+                    src="./IMG/jacket-1000w.gif"
+                    alt="Puffy down jacket, animated gif spinning"
+                    >
+                    <div class="product-info">
+                        <div class="text-container product-hover">
+                            <div class="hedder-continer">
+                                <h2 class="product-title">Säve</h2>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit reprehenderit eaque tempora esse at rerum officiis iusto rem quasi excepturi porro molestiae, deleniti exercitationem quisquam laborum nesciunt inventore labore dolore expedita pariatur itaque alias aut.</p>
+                        </div>
+                        <div class="btn-container-index product-hover">
+                            <button class="btn active test-btn"><span>Läs mer</span></button>
+                            <button class="btn active test-btn"><i class="fa-solid fa-plus"></i><span>Varukorgen</span></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card card_transperent">
+                    <div class="card_info">
+                        <h3><b>Handla tunikor med hjärnan</b></h3>
+                        <span>Från fashion till passion</span>
+                        <p> Vi arbetar ständigt för att se till att din shoppingtur alltid är ett smart val. </p>
+                        <button class="btn">Alla tunikor</button>
+                    </div>
+                </article>
+
+                <!-- Third Product card -->
+                <article class="card">
+                    <img
+                    src="./IMG/skirt-whitebg.gif"
+                    alt="Puffy down jacket, animated gif spinning"
+                    >
+                    <div class="product-info">
+                        <div class="text-container product-hover">
+                            <div class="hedder-continer">
+                                <h2 class="product-title">Arlanda</h2>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <p class="product-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit reprehenderit eaque tempora esse at rerum officiis iusto rem quasi excepturi porro molestiae, deleniti exercitationem quisquam laborum nesciunt inventore labore dolore expedita pariatur itaque alias aut.</p>
+                        </div>
+                        <div class="btn-container-index product-hover">
+                            <button class="btn active test-btn"><span>Läs mer</span></button>
+                            <button class="btn active test-btn"><i class="fa-solid fa-plus"></i><span>Varukorgen</span></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card right card_transperent">
+                    <div class="card_info">
+                        <h3><b>10 000 metersklubben</b></h3>
+                        <span>Från fashion till passion</span>
+                        <p> Vi återvinner många av material från flygplan, giftfritt såklart! Vi plockar från himlen för att smycka till stjärnorna vi har här, dig alltså! </p>
+                        <button class="btn">Alla accessoarer</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Trash Section -->
+        <section class="trash-section" id="trash">
+            <div class="image-box">
+                <img src="IMG/package.jpg" alt="A picture of a package box half open lid with the naturally logo on top of the lid">
+            </div>
+            <div class="text-container">
+                <h2>Sopor <br> en ändlig källa?</h2>
+                <div class="column">
+                    <p>Visste du att en person i genomsnitt varje år slänger 7.5 kg textilier varje år? Det innebär att materialet inte tas tillvara som en värdefull resurs genom att återanvändas eller materialåtervinnas. Över 90 procent av all klimatpåverkan från svensk textilkonsumtion är i dagsläget kopplat till inköp av nyproducerade varor (procentsatsen beräknar klimatpåverkan från både produktion och konsumenternas transport till och från butik för inköpet).</p>
+                    <p><b>I Sverige ökade</b> inköpen av nyproducerad textil i början av 2000-talet från 10,7 kilo till cirka 14 kilo textil per person och år. År 2019 konsumerade varje svensk 13,7 kilo kläder och hemtextil. Det innebär att omkring 141 100 ton kläder och hemtextil sattes på den svenska marknaden (i denna konsumtionsdata ingår enbart företagens import, inte privatpersoners import från annat EU-land).</p>
+                </div>
+                <div class="column">
+                    <p><b>Här på naturally</b> arbetar vi ständigt för att nå en mer hållbar miljö inom textilindustrin. Vi vill nå en punkt där människor handlar med hjärtat utan att behöva tänka på konsekvenserna. Vi vill hjälpa dig att hjälpa alla. Våra kollektioner testar gränserna och vi söker ständigt efter bättre och mer vågade sätt utvinna kontroversiella material. Vi har t.ex. funnit det revolutionerade sättet att göra en tråd av lithium, kvicksilver och koppar amalgam som är näst intill oförstördbar samt väger mindre än 1 g per kubikmeter. Det är det tunnaste massproducerade materialet i världhistorien.</p>
+                    <p><b>Alla våra resurser</b> kommer ursprungligen från naturen vilket innebär att det också är på bekostnad av naturen. Det enda vi gör är att ta till vara på allt vad innebär skräp för att också se till att vi inte tar mer än vi behöver. Ända sedan John Doe uppfann tekniken att giftinkapsla material för att inte skada varken människor, djur eller natur.</p>
+                </div>
+                <p class="bottom-title"><b>Unnaturally Natural</b> helt enkelt!</p>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <h3>Information</h3>
+            <p>Om du tänker dig en naturlig känsla som ger känsla av framtiden så tänker du rätt. Naturally har tagit fram en helt ny produktserie för dig som är medveten om vad du köper. Köp smart. Köp så att det är hållbart för framtiden. Och låt känslan av naturlighet vara med dig.</p>
+            <div class="social">
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+            <img src="IMG/logo-text.svg" alt="Naturally logo">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

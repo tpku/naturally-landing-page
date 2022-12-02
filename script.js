@@ -11,11 +11,7 @@ const rightBottomContainer = document.querySelector(".hero-img-right");
 const leftTopContainer = document.querySelector(".hero-img-left");
 const heroRightBottom = document.querySelector(".hero-img-right img");
 const heroLeftTop = document.querySelector(".hero-img-left img");
-const heroWrapper = document.querySelector(".heading-wrapper");
 
-// window.addEventListener("scroll", function (ev) {
-//   console.log(ev.scrollY = "px");
-// })
 
 const cards = document.querySelectorAll('.card');
 
@@ -130,13 +126,12 @@ cards.forEach( card => {
   })
   const closeBtn = card.querySelector('i')
   if (closeBtn) {
-    console.log(closeBtn);
     closeBtn.addEventListener('click', e => {
       e.target.offsetParent.classList.remove('active')
     })
   }
 })
 
-window.onscroll = function (e) {
-  console.log(window.scrollY); // Value of scroll Y in px
-};
+// window.onscroll = function (e) {
+//   console.log(window.scrollY); // Value of scroll Y in px
+// };

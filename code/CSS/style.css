@@ -587,7 +587,7 @@ h2.smaller::before {
 
 .card{
     position: relative;
-    height: 70vh;
+    height: 65vh;
 }
 
 .card_transperent {
@@ -666,6 +666,12 @@ h2.smaller::before {
     flex-direction: row;
     justify-content: space-between;
 }
+.product-container .btn-container-index button {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .none {
     background-color: var(--white);
@@ -732,9 +738,19 @@ h2.smaller::before {
 }
 .card_transperent .card_info p {
     position: absolute;
-    top: 215px;
+    top: 240px;
     left: 0;
     line-height: 1.5;
+}
+
+.card_transperent .card_info button {
+    font-size: 24px;
+}
+
+.card_transperent .card_info button:hover {
+    color: var(--bone);
+    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.55);
+    transition: box-shadow .4s linear, box-shadow .4s linear;
 }
 
 /* ---- Media Query ---- */
@@ -838,6 +854,12 @@ h2.smaller::before {
     .card_transperent .card_info span {
         display: none;
     }
+    .card_transperent .card_info button {
+        width: 80%;
+        height: 130px;
+        font-size: 38.4px;
+    }
+    
     
     .card_transperent.first-child .card_info span {
         display: inline-block;
@@ -872,7 +894,6 @@ h2.smaller::before {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /* object-position: center; */
 }
 
 .trash-section .text-container {
@@ -921,7 +942,7 @@ h2.smaller::before {
 }
 @media screen and (min-width: 1100px) {
     .image-box {
-        height: 100vh;
+        height: 90vh;
     }
 
     .trash-section .text-container{
